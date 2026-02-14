@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FFFFFF</color>
+    <color name="white">#000000</color>
+    <color name="neon_green">#00C853</color>
+    <color name="neon_blue">#2962FF</color>
+    <color name="neon_orange">#FF6D00</color>
+
+    <color name="red">#D32F2F</color>
+    <color name="silver">#E0E0E0</color>
+    <color name="dark_grey">#757575</color>
+    <color name="teal_500">#009688</color>
+    <color name="blue">#1976D2</color>
+
+    <!---theme setting-->
+
+    <color name="Dashboard_text">#000000</color>
+    <color name="Dashboard_layout">#FFFFFF</color>
+    <color name="card_bg">#F5F5F5</color>
+    <color name="Heading_blue">#1976D2</color>
+    <color name="holo_green">#D32F2F</color>
+    <color name="Status_blue">#FFB74D</color>
+    <color name="bg">#E0E0E0</color>
+
+
+    <color name="chart_bg">#FFFFFF</color>
+    <color name="chart_text">#000000</color>
+    <color name="chart_line">#FFB74D</color>
+    <color name="chip">#757575</color>
+
+    <color name="Download_icon">#42A5F5</color>
+    <color name="Media_icon">#66BB6A</color>
+    <color name="Document_icon">#FFA726</color>
+
+    <color name="Runningapp_icon">#7E57C2</color>
+    <color name="Load_icon">#FFCA28</color>
+
+    <color name="Note">#616161</color>
+
+    <color name="AppStorage1">#E0E0E0</color>
+    <color name="AppStorage2">#1976D2</color>
+    <color name="AppStorage3">#BBDEFB</color>
+    <color name="AppStorage4">#90CAF9</color>
+    <color name="AppStorage5">#1976D2</color>
+
+    <color name="Chart_filler">#FFB74D</color>
+
+    <color name="info_box1">#F0F8FF</color>
+    <color name="info_box2">#B0B0B0</color>
+
+    <color name="Phone_sizes">#FF6F61</color>
+
+    <color name="Phone_Details">#00897B</color>
+
+    <color name="Phone_Diagram1">#E0E0E0</color>
+    <color name="Phone_Diagram2">#B0B0B0</color>
+    <color name="Phone_Diagram3">#F5F5F5</color>
+    <color name="Phone_Diagram4">#CCCCCC</color>
+
+    <color name="Display_card1">#FFFFFF</color>
+    <color name="Display_card2">#DADADA</color>
+
+    <color name="Network_sim">#8E44AD</color>
+
+    <color name="Network_chips">#E3F2FD</color>
+
+    <color name="Network_connect1">#0277BD</color>
+    <color name="Network_connect2">#EF6C00</color>
+    <color name="Network_connect3">#2E7D32</color>
+    <color name="Network_not_connect">#B0B0B0</color>
+
+    <color name="Progressbar_background">#DADADA</color>
+
+    <color name="Hint">#888888</color>
+    <color name="SearchBar">#F5F5F5</color>
+
+    <color name="details">#5C9EFF</color>
+
+    <!---custom theme-->
+    <color name="back">#26F7FD</color>
+    <color name="card">#B0E0E6</color>
+
+
+
+
+</resources>

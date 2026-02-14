@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="?attr/background"
+        android:dividerPadding="8dp">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="?attr/cards"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Battery_H1"
+                android:textSize="?attr/textSizeHeadings"
+                android:textStyle="bold"
+                android:textColor="@color/Heading_blue"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Line Chart -->
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/batteryLineChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/Dashboard_layout"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="?attr/cards"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Battery_H2"
+                android:textSize="?attr/textSizeHeadings"
+                android:textStyle="bold"
+                android:textColor="@color/Heading_blue"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Battery Level -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/battery"
+                    app:tint="@color/neon_green"/>
+
+                <TextView
+                    android:id="@+id/batteryLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Battery Level: 75%"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Charging Status -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/bolt"
+                    app:tint="@color/red"/>
+
+                <TextView
+                    android:id="@+id/chargingStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Charging Status: Discharging"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Battery Health -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/monitor_heart"
+                    app:tint="@color/neon_green"/>
+
+                <TextView
+                    android:id="@+id/batteryHealth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Battery Health: Good"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Voltage -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/electrical_services"
+                    app:tint="@color/Dashboard_text"/>
+
+                <TextView
+                    android:id="@+id/batteryVoltage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Voltage: 3800 mV"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Temperature -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/thermostat"
+                    app:tint="@color/neon_orange"/>
+
+                <TextView
+                    android:id="@+id/batteryTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temperature: 32°C 🔥"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Technology -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/memory"
+                    app:tint="@color/chip"/>
+
+                <TextView
+                    android:id="@+id/batteryTech"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Technology: Li-ion"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+   </LinearLayout>
+</ScrollView>
+</layout>

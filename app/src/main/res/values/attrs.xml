@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Text Sizes -->
+    <attr name="textSizeTitle" format="dimension" />
+    <attr name="textSizeDetails" format="dimension" />
+    <attr name="textSizeHeadings" format="dimension" />
+
+    <attr name="appBackground" format="color" />
+    <attr name="toolBar" format="color" />
+    <attr name="text" format="color"/>
+    <attr name="headings" format="color"/>
+
+    <attr name="cards" format="color"/>
+
+
+</resources>

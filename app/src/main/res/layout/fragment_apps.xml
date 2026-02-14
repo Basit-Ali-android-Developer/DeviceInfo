@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:cardBackgroundColor="?attr/background"
+        android:padding="12dp">
+
+        <!-- Top Row: Search Bar + Installed Apps Count -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <!-- Search Bar -->
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="0.6"
+                android:hint="@string/Apps_search_hint"
+                android:padding="10dp"
+                android:textColor="@color/Dashboard_text"
+                android:textColorHint="@color/Hint"
+                android:background="@drawable/search_background"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawablePadding="8dp" />
+
+            <!-- Installed Apps Count -->
+            <TextView
+                android:id="@+id/appCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="end"
+                android:text="Installed Apps: 0"
+                android:textColor="@color/Dashboard_text"
+                android:textSize="?attr/textSizeTitle"
+                android:layout_marginEnd="8dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:paddingBottom="8dp" />
+
+    </LinearLayout>
+</layout>

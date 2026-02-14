@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CheckIt</string>
+    <string name="App_Title">Device Info</string>
+
+    <string name="Dashboard_h1">Device Name</string>
+    <string name="DashBoard_network_h1">شبكة</string>
+    <string name="Dashboard_network_mobiledata1">Mobile Data: %1$s</string>
+    <string name="Dashboard_network_mobiledata2">لا يوجد اتصال</string>
+    <string name="Dashboard_network_speed1">⬇ %.2f Mbps</string>
+    <string name="DashBoard_battery_h1">بطارية</string>
+    <string name="DashBoard_ram_h1">كبش</string>
+    <string name="DashBoard_ram_t1">2000mbs/3000mbps</string>
+    <string name="DashBoard_sensors_h1">أجهزة الاستشعار</string>
+    <string name="DashBoard_internal_storage_h1">التخزين الداخلي</string>
+    <string name="DashBoard_cpu_h1">حالة وحدة المعالجة المركزية</string>
+    <string name="DashBoard_cpu_h2">حمولة</string>
+    <string name="DashBoard_cpu_t1">المعالج: %1$s</string>
+    <string name="DashBoard_message1">لا توجد شريحة بيانات نشطة</string>
+    <string name="DashBoard_message2">الناقل غير معروف</string>
+    <string name="DashBoard_message3">معرف SSID غير معروف</string>
+    <string name="Dashboard_message4">متصل بشبكة Wi-Fi</string>
+    <string name="storage_free">حر : %.1f جيجابايت</string>
+    <string name="storage_total">الإجمالي: %.1f جيجابايت</string>
+    <string name="ram_reading">%1$d ميجابايت / %2$d ميجابايت</string>
+
+
+
+
+    <string name="Battery_H1">مستوى البطارية (الرسم البياني المباشر)</string>
+    <string name="Battery_H2">تفاصيل البطارية</string>
+    <string name="battery_level">مستوى البطارية: %1$d%%</string>
+    <string name="Battery_t2_option1">الحالة: جاري الشحن</string>
+    <string name="Battery_t2_option2">الحالة: كاملة</string>
+    <string name="Battery_t2_option3">الحالة: تفريغ</string>
+    <string name="Battery_t3_option1">الصحة: جيدة</string>
+    <string name="Battery_t3_option2">الصحة: ارتفاع درجة الحرارة</string>
+    <string name="Battery_t3_option3">الصحة: ميت</string>
+    <string name="Battery_t3_option4">الصحة: الجهد الزائد</string>
+    <string name="Battery_t3_option5">الصحة: غير معروف</string>
+    <string name="Battery_t3_option6">الصحة: غير معروف</string>
+    <string name="Battery_t4">جهد البطارية: %1$d مللي فولت</string>
+    <string name="Battery_t5">درجة حرارة البطارية: %.1f°C</string>
+    <string name="Battery_t6">تقنية البطارية: %1$s</string>
+
+
+    <string name="Storage_internal_h1">التخزين الداخلي</string>
+    <string name="Storage_internal_c1_t1">المجموع</string>
+    <string name="Storage_internal_c2_t1">مستخدم</string>
+    <string name="Storage_internal_c3_t1">حر</string>
+    <string name="Storage_internal_c4_t1">مستخدم ٪</string>
+    <string name="Storage_external_h1">التخزين الخارجي</string>
+    <string name="Storage_external_c5_t1">شنت: </string>
+    <string name="Storage_external_c5_t3">نعم</string>
+    <string name="Storage_external_c5_t2"> طريق: </string>
+    <string name="Storage_external_c6_h1">أحجام المجلدات</string>
+    <string name="Storage_external_c7_t1">لا يوجد تخزين خارجي</string>
+    <string name="Storage_external_c7_t2">لا يحتوي جهازك على بطاقة SD أو وحدة تخزين ثانوية.\nأدخل بطاقة SD لرؤية تفاصيل وحدة التخزين الخارجية.</string>
+    <string name="running_apps_count">التطبيقات قيد التشغيل: %1$d</string>
+    <string name="ram_title">الذاكرة (RAM) - %1$d ميجابايت إجمالي</string>
+    <string name="ram_used">%1$d ميجابايت مستخدمة</string>
+    <string name="ram_free">المتبقية: %1$d ميجابايت</string>
+    <string name="average_usage">متوسط الحمل: %1$d%%</string>
+    <string name="Storage_app_botton">عرض تفاصيل مساحة تخزين التطبيق</string>
+    <string name="external_downloads_size">التنزيلات: %1$s جيجابايت</string>
+    <string name="external_media_size">الوسائط: %1$s جيجابايت</string>
+    <string name="external_documents_size">المستندات: %1$s جيجابايت</string>
+
+
+
+
+    <string name="Display_c1_h1">نظرة عامة على العرض</string>
+    <string name="Display_c3_t1">بيئة العرض</string>
+    <string name="Display_c3_t2">☀️ سطوع:</string>
+    <string name="Display_c3_t3">⏰ نفذ الوقت:</string>
+    <string name="Display_c3_t4">📐 توجيه:</string>
+    <string name="Display_c3_t5">🌙 الوضع الداكن:</string>
+    <string name="Display_c4_h1">تفاصيل العرض</string>
+    <string name="Display_c4_t1">يكتب</string>
+    <string name="Display_c4_t2">عمق اللون</string>
+    <string name="Display_c4_t3">نسبة الارتفاع</string>
+    <string name="Display_c4_t4">ذروة السطوع</string>
+    <string name="Display_c4_t5">نسبة البكسل</string>
+    <string name="Display_c4_t6">انقطاع العرض</string>
+    <string name="Display_screen_size">حجم الشاشة: %1$.1f بوصة</string>
+    <string name="Display_screen_resolution">الدقة: %1$d × %2$d بكسل</string>
+    <string name="Display_screen_density">الكثافة: %1$d نقطة في البوصة</string>
+    <string name="Display_screen_refresh_rate">معدل التحديث: %1$d هرتز</string>
+    <string name="Display_screen_orientation_01">عمودي</string>
+    <string name="Display_screen_orientation_02">أفقي</string>
+    <string name="Display_dark_o1">تشغيل</string>
+    <string name="Display_dark_o2">إيقاف</string>
+    <string name="Display_dark_o3">تلقائي</string>
+    <string name="Display_type_o1">AMOLED</string>
+    <string name="Display_version_o1">30-بت</string>
+    <string name="Display_version_o2">32-بت</string>
+    <string name="Display_version_o3">24-بت</string>
+    <string name="Display_brightness_else">غير معروف</string>
+    <string name="Display_cutout_o1">موجود</string>
+    <string name="Display_cutout_o2">لا يوجد</string>
+    <string name="Display_cutout_o3">غير مدعوم</string>
+
+
+
+
+
+
+    <string name="Apps_search_hint"> بحث في التطبيقات...</string>
+    <string name="Apps_count">التطبيقات: %1$d</string>
+    <string name="app_version">الإصدار: %1$s</string>
+    <string name="app_storage">التخزين: %1$s</string>
+
+
+    <string name="Processor_c1_h1">معلومات المعالج</string>
+    <string name="Processor_c1_h2">نموذج:</string>
+    <string name="Processor_c1_h3">بنيان:</string>
+    <string name="Processor_c1_h4">مجموع النوى:</string>
+    <string name="Processor_c1_h5">واجهات برمجة التطبيقات المدعومة:</string>
+    <string name="Processor_c2_h1">المجموعات الأساسية</string>
+    <string name="Processor_c3_h1">التفاصيل الأساسية</string>
+    <string name="Processor_c3_h2">الأساسية 0</string>
+    <string name="Processor_c3_h3">الأساسية 1</string>
+    <string name="Processor_c3_h4">الأساسية 2</string>
+    <string name="Processor_c3_h5">الأساسية 3</string>
+    <string name="Processor_c3_h6">الأساسية 4</string>
+    <string name="Processor_c3_h7">الأساسية 5</string>
+    <string name="Processor_c3_h8">الأساسية 6</string>
+    <string name="Processor_c3_h9">الأساسية 7</string>
+    <string name="Processor_c4_h1">أداء المعالج</string>
+    <string name="Processor_c4_h2">استخدام وحدة المعالجة المركزية</string>
+    <string name="Processor_c4_h3">متوسط الحمل (1م / 5م / 15م):</string>
+    <string name="Processor_c5_h1">تكرار</string>
+    <string name="cpu_arch_arm64">‏ARM‏ ‏64‏-بت</string>
+    <string name="cpu_arch_arm32">‏ARM‏ ‏32‏-بت</string>
+    <string name="cpu_arch_x86_64">‏x86‏ ‏64‏-بت</string>
+    <string name="cpu_arch_x86_32">‏x86‏ ‏32‏-بت</string>
+    <string name="cpu_cluster1">⚡ الأداء (Cortex-X1): نواة واحدة @ ‏2.84 غيغاهرتز</string>
+    <string name="cpu_cluster2">🚀 الأداء (Cortex-A78): ‏3‏ نوى @ ‏2.42 غيغاهرتز</string>
+    <string name="cpu_cluster3">🔋 الكفاءة (Cortex-A55): ‏4‏ نوى @ ‏1.8 غيغاهرتز</string>
+    <string name="cpu_core_label">النواة %1$d</string>
+    <string name="min_freq">أدنى تردد: %1$d ميجاهرتز</string>
+    <string name="max_freq">أقصى تردد: %1$d ميجاهرتز</string>
+    <string name="current_freq">التردد الحالي (النواة 0): %1$d ميجاهرتز</string>
+    <string name="min_freq_na">أدنى تردد: غير متاح</string>
+    <string name="max_freq_na">أقصى تردد: غير متاح</string>
+    <string name="current_freq_na">التردد الحالي: غير متاح</string>
+    <string name="governor">المتحكم: %1$s</string>
+    <string name="governor_na">المتحكم: غير متاح</string>
+
+
+
+    <string name="Network_sim_h1">معلومات سيم</string>
+    <string name="Network_sim_message1">لم يتم اكتشاف أي بطاقة SIM</string>
+    <string name="Network_sim_message2">جهازك لا يحتوي على بطاقة SIM.\nأدخل بطاقة SIM لعرض تفاصيل الشبكة ومعلومات الشريحة.</string>
+    <string name="Network_wifi_h1">معلومات واي فاي</string>
+    <string name="Network_wifi_h2">سرعة الواي فاي المتوفرة</string>
+    <string name="Network_wifi_h3">لا يوجد اتصال واي فاي</string>
+    <string name="Network_wifi_h4">جهازك غير متصل بأي شبكة Wi-Fi.\nقم بالاتصال بشبكة Wi-Fi لرؤية تفاصيل الشبكة والسرعة.</string>
+    <string name="Network_hotspot_h1">البيانات المحمولة ونقطة الاتصال</string>
+    <string name="Network_device_h1">اتصال الأجهزة والشبكات</string>
+    <string name="Network_c1_offline_t1">غير متصل</string>
+    <string name="Network_c1_offline_t2">"⬇ 0.0 Kbps"</string>
+    <string name="Network_c1_offline_t3">"⬆ 0.0 Kbps"</string>
+    <string name="Network_c1_Wifi_t1">متصل بشبكة واي فاي</string>
+    <string name="Network_c1_wifi_t2">واي فاي</string>
+    <string name="Network_c1_mobiledata_t1">غير معروف</string>
+    <string name="Network_c2_nosim_t1">لا توجد شريحة بيانات نشطة</string>
+    <string name="Network_c2_nosim_t2">مزود خدمة غير معروف</string>
+    <string name="Network_c2_sim_m1">بيانات الجوال</string>
+    <string name="Network_c2_sim_t2_o1">بيانات الجوال: ‎4G LTE‎</string>
+    <string name="Network_c2_sim_t2_o2">بيانات الجوال: ‎5G‎</string>
+    <string name="Network_c2_sim_t2_o3">بيانات الجوال: ‎3G‎</string>
+    <string name="Network_c2_sim_t2_o4">بيانات الجوال: ‎2G‎</string>
+    <string name="sim_name_format">%1$s ‏(شريحة %2$d)</string>
+    <string name="Network_c2_sim_o1">4G إل تي إي</string>
+    <string name="Network_c2_sim_o2">5G</string>
+    <string name="Network_c2_sim_o3">3G</string>
+    <string name="Network_c2_sim_o4">2G</string>
+    <string name="Network_c2_sim_o5">لا توجد بيانات</string>
+    <string name="Network_c3_t1">الشبكة: %1$s</string>
+    <string name="Network_c3_t2">التجوال: %1$s</string>
+    <string name="Network_c3_on">تشغيل</string>
+    <string name="Network_c3_off">إيقاف</string>
+    <string name="Network_c3_wifi_connection">مفتوح</string>
+    <string name="Network_c4_mobiledata_status">بيانات الهاتف المحمول: %1$s</string>
+    <string name="Network_c4_on">تشغيل</string>
+    <string name="Network_c4_off">إيقاف</string>
+    <string name="Network_bt_on">البلوتوث: تشغيل — %1$s</string>
+    <string name="Network_bt_off">البلوتوث: إيقاف</string>
+    <string name="Network_bt_nodevice">لا يوجد جهاز</string>
+    <string name="Network_nfc_supported">NFC: مدعوم</string>
+    <string name="Network_nfc_notsupported">NFC: غير مدعوم</string>
+    <string name="Network_ping_result">اختبار الاتصال: %1$s مللي ثانية (إلى 8.8.8.8)</string>
+    <string name="Network_ping_na">اختبار الاتصال: غير متاح</string>
+    <string name="Network_publicip">عنوان IP العام: %1$s</string>
+    <string name="Network_publicip_na">عنوان IP العام: غير متاح</string>
+    <string name="Network_dns">نظام أسماء النطاقات: %1$s</string>
+    <string name="Network_dns_na">نظام أسماء النطاقات: غير متاح</string>
+    <string name="Network_wifi_location_disabled">تم إيقاف الموقع — لا يمكن الحصول على اسم شبكة Wi-Fi</string>
+    <string name="Network_wifi_permission_denied">تم رفض الإذن — لا يمكن الحصول على اسم شبكة Wi-Fi</string>
+    <string name="Network_c5_hotspot_status">نقطة الاتصال: %1$s</string>
+    <string name="Network_c5_hotspot_on">تشغيل</string>
+    <string name="Network_c5_hotspot_off">إيقاف</string>
+
+
+    <string name="sensor_count">إجمالي المستشعرات: %1$d</string>
+    <string name="sensor_details">النوع:    %1$s\nالمُصنِّع:    %2$s\nالإصدار:    %3$s\nالطاقة:    %4$s mA\nالدقة:    %5$s\nالمدى الأقصى:  %6$s</string>
+    <string name="Sensors_H1">أجهزة الاستشعار المتاحة</string>
+    <string name="Sensors_message">لم يتم العثور على أي أجهزة استشعار على هذا الجهاز.</string>
+
+    <string name="Main_menu_themes">السِمة</string>
+    <string name="Main_menu_language">اللغة</string>
+
+    <string name="tab_dashboard">لوحة التحكم</string>
+    <string name="tab_processor">المعالج</string>
+    <string name="tab_battery">البطارية</string>
+    <string name="tab_storage">التخزين</string>
+    <string name="tab_display">العرض</string>
+    <string name="tab_network">الشبكة</string>
+    <string name="tab_sensors">المستشعرات</string>
+    <string name="tab_apps">التطبيقات</string>
+
+
+    <string name="changing_language">...يتم تغيير اللغة</string>
+    <string name="applying_theme">...يتم تطبيق السمة</string>
+    <string name="please_wait">...يرجى الانتظار</string>
+
+
+
+</resources>

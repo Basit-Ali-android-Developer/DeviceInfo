@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CheckIt</string>
+    <string name="App_Title">Device Info</string>
+    <string name="Dashboard_h1">Device Name</string>
+    <string name="DashBoard_network_h1">نیٹ ورک</string>
+
+
+    <string name="Dashboard_network_mobiledata1">Mobile Data: %1$s</string>
+    <string name="Dashboard_network_mobiledata2">کوئی کنکشن نہیں۔</string>
+    <string name="Dashboard_network_speed1">⬇ %.2f Mbps</string>
+    <string name="DashBoard_battery_h1">بیٹری</string>
+    <string name="DashBoard_ram_h1">رام</string>
+    <string name="DashBoard_ram_t1">2000mbs/3000mbps</string>
+    <string name="DashBoard_sensors_h1">سینسر</string>
+    <string name="DashBoard_internal_storage_h1">اندرونی اسٹوریج</string>
+    <string name="DashBoard_cpu_h1">سی پی یو کی حیثیت</string>
+    <string name="DashBoard_cpu_h2">لوڈ</string>
+    <string name="DashBoard_cpu_t1">پروسیسر: %1$s</string>
+    <string name="DashBoard_message1">کوئی ایکٹو ڈیٹا سم نہیں ہے۔</string>
+    <string name="DashBoard_message2">نامعلوم کیریئر</string>
+    <string name="DashBoard_message3">نامعلوم ssid</string>
+    <string name="Dashboard_message4">Wi-Fi منسلک ہے۔</string>
+    <string name="storage_free">خالی : %.1f جی بی</string>
+    <string name="storage_total">کل: %.1f جی بی</string>
+    <string name="ram_reading">%1$d ایم بی / %2$d ایم بی</string>
+
+
+
+
+    <string name="Battery_H1">بیٹری کی سطح (لائیو گراف)</string>
+    <string name="Battery_H2">بیٹری کی تفصیلات</string>
+    <string name="battery_level">بیٹری لیول: %1$d%%</string>
+    <string name="Battery_t2_option1">حیثیت: چارج کرنا</string>
+    <string name="Battery_t2_option2">حیثیت: مکمل</string>
+    <string name="Battery_t2_option3">حیثیت: خارج کرنا</string>
+    <string name="Battery_t3_option1">صحت: اچھا</string>
+    <string name="Battery_t3_option2">صحت: زیادہ گرمی</string>
+    <string name="Battery_t3_option3">صحت: مردہ</string>
+    <string name="Battery_t3_option4">صحت: زیادہ وولٹیج</string>
+    <string name="Battery_t3_option5">صحت: نامعلوم</string>
+    <string name="Battery_t3_option6">صحت: نامعلوم</string>
+    <string name="Battery_t4">بیٹری وولٹیج: %1$d ملی وولٹ</string>
+    <string name="Battery_t5">درجہ حرارت: %.1f°C</string>
+    <string name="Battery_t6">ٹیکنالوجی: %1$s</string>
+
+
+    <string name="Storage_internal_h1">اندرونی اسٹوریج</string>
+    <string name="Storage_internal_c1_t1">کل</string>
+    <string name="Storage_internal_c2_t1">استعمال کیا جاتا ہے</string>
+    <string name="Storage_internal_c3_t1">مفت</string>
+    <string name="Storage_internal_c4_t1">استعمال شدہ %</string>
+    <string name="Storage_external_h1">بیرونی اسٹوریج</string>
+    <string name="Storage_external_c5_t1">نصب: </string>
+    <string name="Storage_external_c5_t3">جی ہاں</string>
+    <string name="Storage_external_c5_t2">راستہ:</string>
+    <string name="Storage_external_c6_h1">فولڈر کے سائز</string>
+    <string name="Storage_external_c7_t1">کوئی بیرونی اسٹوریج نہیں۔</string>
+    <string name="Storage_external_c7_t2">آپ کے آلے میں SD کارڈ یا ثانوی اسٹوریج نہیں ہے۔\nبیرونی اسٹوریج کی تفصیلات دیکھنے کے لیے SD کارڈ داخل کریں۔</string>
+    <string name="running_apps_count">چلنے والی ایپس: %1$d</string>
+    <string name="ram_title">ریم - %1$d ایم بی کل</string>
+    <string name="ram_used">%1$d ایم بی استعمال شدہ</string>
+    <string name="ram_free">خالی: %1$d ایم بی</string>
+    <string name="average_usage">اوسط لوڈ: %1$d%%</string>
+    <string name="Storage_app_botton">ایپ کے اسٹوریج کی تفصیلات دیکھیں</string>
+    <string name="external_downloads_size">ڈاؤن لوڈز: %1$s جی بی</string>
+    <string name="external_media_size">میڈیا: %1$s جی بی</string>
+    <string name="external_documents_size">دستاویزات: %1$s جی بی</string>
+
+
+
+
+    <string name="Display_c1_h1">ڈسپلے کا جائزہ</string>
+    <string name="Display_c3_t1">ڈسپلے ماحول</string>
+    <string name="Display_c3_t2">☀️ چمک:</string>
+    <string name="Display_c3_t3">⏰ ٹائم آؤٹ:</string>
+    <string name="Display_c3_t4">📐 واقفیت:</string>
+    <string name="Display_c3_t5">🌙 ڈارک موڈ:</string>
+    <string name="Display_c4_h1">تفصیلات ڈسپلے کریں۔</string>
+    <string name="Display_c4_t1">قسم</string>
+    <string name="Display_c4_t2">رنگ کی گہرائی</string>
+    <string name="Display_c4_t3">پہلو کا تناسب</string>
+    <string name="Display_c4_t4">چوٹی کی چمک</string>
+    <string name="Display_c4_t5">پکسل کا تناسب</string>
+    <string name="Display_c4_t6">ڈسپلے کٹ آؤٹ</string>
+    <string name="Display_screen_size">سکرین سائز: %1$.1f انچ</string>
+    <string name="Display_screen_resolution">ریزولوشن: %1$d × %2$d پکسل</string>
+    <string name="Display_screen_density">ڈینسٹی: %1$d ڈی پی آئی</string>
+    <string name="Display_screen_refresh_rate">ریفریش ریٹ: %1$d ہرٹز</string>
+    <string name="Display_screen_orientation_01">عمودی</string>
+    <string name="Display_screen_orientation_02">افقی</string>
+    <string name="Display_dark_o1">آن</string>
+    <string name="Display_dark_o2">آف</string>
+    <string name="Display_dark_o3">خودکار</string>
+    <string name="Display_type_o1">AMOLED</string>
+    <string name="Display_version_o1">30-بٹ</string>
+    <string name="Display_version_o2">32-بٹ</string>
+    <string name="Display_version_o3">24-بٹ</string>
+    <string name="Display_brightness_else">نامعلوم</string>
+    <string name="Display_cutout_o1">موجود</string>
+    <string name="Display_cutout_o2">کوئی نہیں</string>
+    <string name="Display_cutout_o3">مدد یافتہ نہیں</string>
+
+
+
+
+
+    <string name="Apps_search_hint"> ایپس تلاش کریں...</string>
+    <string name="Apps_count">ایپس: %1$d</string>
+    <string name="app_version">ورژن: %1$s</string>
+    <string name="app_storage">اسٹوریج: %1$s</string>
+
+
+    <string name="Processor_c1_h1">پروسیسر کی معلومات</string>
+    <string name="Processor_c1_h2"> ماڈل:</string>
+    <string name="Processor_c1_h3">فن تعمیر:</string>
+    <string name="Processor_c1_h4">کل کور:</string>
+    <string name="Processor_c1_h5">تعاون یافتہ ABIs:</string>
+    <string name="Processor_c2_h1">کور کلسٹرز</string>
+    <string name="Processor_c3_h1">بنیادی تفصیلات</string>
+    <string name="Processor_c3_h2">کور 0</string>
+    <string name="Processor_c3_h3">کور 1</string>
+    <string name="Processor_c3_h4">کور 2</string>
+    <string name="Processor_c3_h5">کور 3</string>
+    <string name="Processor_c3_h6">کور 4</string>
+    <string name="Processor_c3_h7">کور 5</string>
+    <string name="Processor_c3_h8">کور 6</string>
+    <string name="Processor_c3_h9">کور 7</string>
+    <string name="Processor_c4_h1">پروسیسر کی کارکردگی</string>
+    <string name="Processor_c4_h2">سی پی یو کا استعمال</string>
+    <string name="Processor_c4_h3">لوڈ اوسط (1m/5m/15m):</string>
+    <string name="Processor_c5_h1">تعدد</string>
+    <string name="cpu_arch_arm64">اے آر ایم 64-بٹ</string>
+    <string name="cpu_arch_arm32">اے آر ایم 32-بٹ</string>
+    <string name="cpu_arch_x86_64">ایکس86 64-بٹ</string>
+    <string name="cpu_arch_x86_32">ایکس86 32-بٹ</string>
+    <string name="cpu_cluster1">⚡ کارکردگی (Cortex-X1): 1 کور @ 2.84 گیگا ہرٹز</string>
+    <string name="cpu_cluster2">🚀 کارکردگی (Cortex-A78): 3 کورز @ 2.42 گیگا ہرٹز</string>
+    <string name="cpu_cluster3">🔋 کارکردگی (Cortex-A55): 4 کورز @ 1.8 گیگا ہرٹز</string>
+    <string name="cpu_core_label">کور %1$d</string>
+    <string name="min_freq">کم از کم فریکوئنسی: %1$d میگاہرٹز</string>
+    <string name="max_freq">زیادہ سے زیادہ فریکوئنسی: %1$d میگاہرٹز</string>
+    <string name="current_freq">موجودہ فریکوئنسی (کور 0): %1$d میگاہرٹز</string>
+    <string name="min_freq_na">کم از کم فریکوئنسی: دستیاب نہیں</string>
+    <string name="max_freq_na">زیادہ سے زیادہ فریکوئنسی: دستیاب نہیں</string>
+    <string name="current_freq_na">موجودہ فریکوئنسی: دستیاب نہیں</string>
+    <string name="governor">گورنر: %1$s</string>
+    <string name="governor_na">گورنر: دستیاب نہیں</string>
+
+
+
+
+
+
+
+
+    <string name="Network_sim_h1">سم معلومات</string>
+    <string name="Network_sim_message1">کوئی سم نہیں ملی</string>
+    <string name="Network_sim_message2">آپ کے آلے میں سم کارڈ داخل نہیں کیا گیا ہے۔\nنیٹ ورک کی تفصیلات اور سم کی معلومات دیکھنے کے لیے ایک سم داخل کریں۔</string>
+    <string name="Network_wifi_h1">وائی فائی کی معلومات</string>
+    <string name="Network_wifi_h2">دستیاب وائی فائی کی رفتار</string>
+    <string name="Network_wifi_h3">کوئی Wi-Fi منسلک نہیں ہے۔</string>
+    <string name="Network_wifi_h4">آپ کا آلہ کسی Wi-Fi نیٹ ورک سے منسلک نہیں ہے۔\nنیٹ ورک کی تفصیلات اور رفتار دیکھنے کے لیے Wi-Fi سے جڑیں۔</string>
+    <string name="Network_hotspot_h1">موبائل ڈیٹا اور ہاٹ سپاٹ</string>
+    <string name="Network_device_h1">ڈیوائس کنیکٹیویٹی اور نیٹ ورکس</string>
+    <string name="Network_c1_offline_t1">آف لائن</string>
+    <string name="Network_c1_offline_t2">"⬇ 0.0 Kbps"</string>
+    <string name="Network_c1_offline_t3">"⬆ 0.0 Kbps"</string>
+    <string name="Network_c1_Wifi_t1">وائی فائی منسلک ہے</string>
+    <string name="Network_c1_wifi_t2">وائی فائی</string>
+    <string name="Network_c1_mobiledata_t1">نامعلوم</string>
+    <string name="Network_c2_nosim_t1">کوئی فعال ڈیٹا سم نہیں</string>
+    <string name="Network_c2_nosim_t2">نامعلوم کیریئر</string>
+    <string name="Network_c2_sim_m1">موبائل ڈیٹا</string>
+    <string name="Network_c2_sim_t2_o1">موبائل ڈیٹا: 4G LTE</string>
+    <string name="Network_c2_sim_t2_o2">موبائل ڈیٹا: 5G</string>
+    <string name="Network_c2_sim_t2_o3">موبائل ڈیٹا: 3G</string>
+    <string name="Network_c2_sim_t2_o4">موبائل ڈیٹا: 2G</string>
+    <string name="sim_name_format">%1$s ‏(سم %2$d)</string>
+    <string name="Network_c2_sim_o1">4G ایل ٹی ای</string>
+    <string name="Network_c2_sim_o2">5G</string>
+    <string name="Network_c2_sim_o3">3G</string>
+    <string name="Network_c2_sim_o4">2G</string>
+    <string name="Network_c2_sim_o5">کوئی ڈیٹا نہیں</string>
+    <string name="Network_c3_t1">نیٹ ورک: %1$s</string>
+    <string name="Network_c3_t2">رومنگ: %1$s</string>
+    <string name="Network_c3_on">چالو</string>
+    <string name="Network_c3_off">بند</string>
+    <string name="Network_c3_wifi_connection">کھلا</string>
+    <string name="Network_c4_mobiledata_status">موبائل ڈیٹا: %1$s</string>
+    <string name="Network_c4_on">آن</string>
+    <string name="Network_c4_off">آف</string>
+    <string name="Network_bt_on">بلوٹوتھ: آن — %1$s</string>
+    <string name="Network_bt_off">بلوٹوتھ: آف</string>
+    <string name="Network_bt_nodevice">کوئی آلہ نہیں</string>
+    <string name="Network_nfc_supported">این ایف سی: معاون</string>
+    <string name="Network_nfc_notsupported">این ایف سی: غیر معاون</string>
+    <string name="Network_ping_result">پنگ: %1$s ملی سیکنڈ (8.8.8.8 تک)</string>
+    <string name="Network_ping_na">پنگ: دستیاب نہیں</string>
+    <string name="Network_publicip">عوامی آئی پی: %1$s</string>
+    <string name="Network_publicip_na">عوامی آئی پی: دستیاب نہیں</string>
+    <string name="Network_dns">ڈی این ایس: %1$s</string>
+    <string name="Network_dns_na">ڈی این ایس: دستیاب نہیں</string>
+    <string name="Network_wifi_location_disabled">لوکیشن بند ہے — وائی فائی کا نام حاصل نہیں کیا جا سکا</string>
+    <string name="Network_wifi_permission_denied">اجازت مسترد کر دی گئی — وائی فائی کا نام حاصل نہیں کیا جا سکا</string>
+    <string name="Network_c5_hotspot_status">ہاٹ اسپاٹ: %1$s</string>
+    <string name="Network_c5_hotspot_on">چالو</string>
+    <string name="Network_c5_hotspot_off">بند</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="sensor_count">کل سینسرز: %1$d</string>
+    <string name="sensor_details">قسم:    %1$s\nوینڈر:    %2$s\nورژن:    %3$s\nپاور:    %4$s mA\nریزولوشن:    %5$s\nزیادہ سے زیادہ حد:  %6$s</string>
+    <string name="Sensors_H1">دستیاب سینسر</string>
+    <string name="Sensors_message">اس ڈیوائس پر کوئی سینسرز نہیں ملے۔</string>
+
+    <string name="Main_menu_themes">تھیم</string>
+    <string name="Main_menu_language">زبان</string>
+
+    <string name="tab_dashboard">ڈیش بورڈ</string>
+    <string name="tab_processor">پروسیسر</string>
+    <string name="tab_battery">بیٹری</string>
+    <string name="tab_storage">اسٹوریج</string>
+    <string name="tab_display">ڈسپلے</string>
+    <string name="tab_network">نیٹ ورک</string>
+    <string name="tab_sensors">سینسرز</string>
+    <string name="tab_apps">ایپس</string>
+
+
+    <string name="changing_language">زبان تبدیل کی جا رہی ہے...</string>
+    <string name="applying_theme">تھیم لاگو کی جا رہی ہے...</string>
+    <string name="please_wait">براہ کرم انتظار کریں...</string>
+
+
+
+</resources>

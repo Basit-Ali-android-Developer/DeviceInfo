@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CheckIt</string>
+    <string name="App_Title">Device Info</string>
+    <string name="Dashboard_h1">Device Name</string>
+    <string name="DashBoard_network_h1">Network</string>
+
+    <string name="Dashboard_network_mobiledata1">Mobile Data: %1$s</string>
+    <string name="Dashboard_network_mobiledata2">No Connection</string>
+    <string name="Dashboard_network_speed1">⬇ %.2f Mbps</string>
+    <string name="DashBoard_battery_h1">Battery</string>
+    <string name="DashBoard_ram_h1">RAM</string>
+    <string name="DashBoard_ram_t1">2000mbs/3000mbps</string>
+    <string name="DashBoard_sensors_h1">Sensors</string>
+    <string name="DashBoard_internal_storage_h1">Internal Storage</string>
+    <string name="DashBoard_cpu_h1">CPU Status</string>
+    <string name="DashBoard_cpu_h2">Load</string>
+    <string name="DashBoard_cpu_t1">Processor: %1$s</string>
+    <string name="DashBoard_message1">No Active Data SIM</string>
+    <string name="DashBoard_message2">Unknown Carrier</string>
+    <string name="DashBoard_message3">unknown ssid</string>
+    <string name="Dashboard_message4">Wi-Fi Connected</string>
+    <string name="storage_free">Free: %.1f GB</string>
+    <string name="storage_total">Total: %.1f GB</string>
+    <string name="ram_reading">%1$d MB / %2$d MB</string>
+
+
+
+    <string name="Battery_H1">Battery Level (Live Graph)</string>
+    <string name="Battery_H2">Battery Details</string>
+    <string name="battery_level">Battery Level: %1$d%%</string>
+    <string name="Battery_t2_option1">Status: Charging</string>
+    <string name="Battery_t2_option2">Status: Full</string>
+    <string name="Battery_t2_option3">Status: Discharging</string>
+    <string name="Battery_t3_option1">Health: Good</string>
+    <string name="Battery_t3_option2">Health: Overheat</string>
+    <string name="Battery_t3_option3">Health: Dead</string>
+    <string name="Battery_t3_option4">Health: Over Voltage</string>
+    <string name="Battery_t3_option5">Health: Unknown</string>
+    <string name="Battery_t3_option6">Health: Unknown</string>
+    <string name="Battery_t4">Battery Voltage: %1$d mV</string>
+    <string name="Battery_t5">Temperature: %.1f°C</string>
+    <string name="Battery_t6">Technology: %1$s</string>
+
+
+    <string name="Storage_internal_h1">Internal Storage</string>
+    <string name="Storage_internal_c1_t1">Total</string>
+    <string name="Storage_internal_c2_t1">Used</string>
+    <string name="Storage_internal_c3_t1">Free</string>
+    <string name="Storage_internal_c4_t1">Used %</string>
+    <string name="Storage_external_h1">External Storage</string>
+    <string name="Storage_external_c5_t1">Mounted: </string>
+    <string name="Storage_external_c5_t3">Yes</string>
+    <string name="Storage_external_c5_t2">Path:</string>
+    <string name="Storage_external_c6_h1">Folder Sizes</string>
+    <string name="Storage_external_c7_t1">No External Storage</string>
+    <string name="Storage_external_c7_t2">Your device does not have an SD card or secondary storage.\nInsert an SD card to see external storage details.</string>
+    <string name="running_apps_count">Running Apps: %1$d</string>
+    <string name="ram_title">RAM - %1$d MB Total</string>
+    <string name="ram_used">%1$d MB Used</string>
+    <string name="ram_free">Free: %1$d MB</string>
+    <string name="average_usage">Average Load: %1$d%%</string>
+    <string name="Storage_app_botton">View App Storage Details</string>
+    <string name="external_downloads_size">Downloads: %1$s GB</string>
+    <string name="external_media_size">Media: %1$s GB</string>
+    <string name="external_documents_size">Documents: %1$s GB</string>
+
+
+
+
+    <string name="Display_c1_h1">Display Overview</string>
+    <string name="Display_c3_t1">Display Environment</string>
+    <string name="Display_c3_t2">☀️ Brightness:</string>
+    <string name="Display_c3_t3">⏰ Timeout:</string>
+    <string name="Display_c3_t4">📐 Orientation:</string>
+    <string name="Display_c3_t5">🌙 Dark Mode:</string>
+    <string name="Display_c4_h1">Display Details</string>
+    <string name="Display_c4_t1">Type</string>
+    <string name="Display_c4_t2">Color Depth</string>
+    <string name="Display_c4_t3">Aspect Ratio</string>
+    <string name="Display_c4_t4">Peak Brightness</string>
+    <string name="Display_c4_t5">Pixel Ratio</string>
+    <string name="Display_c4_t6">Display Cutout</string>
+    <string name="Display_screen_size">Screen Size: %1$.1f in</string>
+    <string name="Display_screen_resolution">Resolution: %1$d × %2$d px</string>
+    <string name="Display_screen_density">Density: %1$d dpi</string>
+    <string name="Display_screen_refresh_rate">Refresh Rate: %1$d Hz</string>
+    <string name="Display_screen_orientation_01">Portrait</string>
+    <string name="Display_screen_orientation_02">Landscape</string>
+    <string name="Display_dark_o1">On</string>
+    <string name="Display_dark_o2">Off</string>
+    <string name="Display_dark_o3">Auto</string>
+    <string name="Display_type_o1">AMOLED</string>
+    <string name="Display_version_o1">30-bit</string>
+    <string name="Display_version_o2">32-bit</string>
+    <string name="Display_version_o3">24-bit</string>
+    <string name="Display_brightness_else">Unknown</string>
+    <string name="Display_cutout_o1">Present</string>
+    <string name="Display_cutout_o2">None</string>
+    <string name="Display_cutout_o3">Not Supported</string>
+
+
+
+
+    <string name="Apps_search_hint">Search apps...</string>
+    <string name="app_version">"Version:   %1$s"</string>
+    <string name="app_storage">"  %1$s"</string>
+    <string name="Apps_count">Apps: %1$d</string>
+
+
+
+
+    <string name="Processor_c1_h1">Processor Information</string>
+    <string name="Processor_c1_h2">CPU Model:</string>
+    <string name="Processor_c1_h3">Architecture:</string>
+    <string name="Processor_c1_h4">Total Cores:</string>
+    <string name="Processor_c1_h5">Supported ABIs:</string>
+    <string name="Processor_c2_h1">Core Clusters</string>
+    <string name="Processor_c3_h1">Core Details</string>
+    <string name="Processor_c3_h2">Core 0</string>
+    <string name="Processor_c3_h3">Core 1</string>
+    <string name="Processor_c3_h4">Core 2</string>
+    <string name="Processor_c3_h5">Core 3</string>
+    <string name="Processor_c3_h6">Core 4</string>
+    <string name="Processor_c3_h7">Core 5</string>
+    <string name="Processor_c3_h8">Core 6</string>
+    <string name="Processor_c3_h9">Core 7</string>
+    <string name="Processor_c4_h1">Processor Performance</string>
+    <string name="Processor_c4_h2">CPU Usage</string>
+    <string name="Processor_c4_h3">Load Average (1m / 5m / 15m):</string>
+    <string name="Processor_c5_h1">Frequency</string>
+    <string name="cpu_arch_arm64">ARM 64-bit</string>
+    <string name="cpu_arch_arm32">ARM 32-bit</string>
+    <string name="cpu_arch_x86_64">x86 64-bit</string>
+    <string name="cpu_arch_x86_32">x86 32-bit</string>
+    <string name="cpu_cluster1">⚡ Performance (Cortex-X1): 1 Core @ 2.84 GHz</string>
+    <string name="cpu_cluster2">🚀 Performance (Cortex-A78): 3 Cores @ 2.42 GHz</string>
+    <string name="cpu_cluster3">🔋 Efficiency (Cortex-A55): 4 Cores @ 1.8 GHz</string>
+    <string name="cpu_core_label">Core %1$d</string>
+    <string name="min_freq">Min Frequency: %1$d MHz</string>
+    <string name="max_freq">Max Frequency: %1$d MHz</string>
+    <string name="current_freq">Current Frequency (Core 0): %1$d MHz</string>
+    <string name="min_freq_na">Min Frequency: N/A</string>
+    <string name="max_freq_na">Max Frequency: N/A</string>
+    <string name="current_freq_na">Current Frequency: N/A</string>
+    <string name="governor">Governor: %1$s</string>
+    <string name="governor_na">Governor: N/A</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="Network_sim_h1">Sim Information</string>
+    <string name="Network_sim_message1">No SIM Detected</string>
+    <string name="Network_sim_message2">Your device does not have a SIM card inserted.\nInsert a SIM to see network details and SIM information.</string>
+    <string name="Network_wifi_h1">Wifi Information</string>
+    <string name="Network_wifi_h2">Available Wi-Fi Speed</string>
+    <string name="Network_wifi_h3">No Wi-Fi Connected</string>
+    <string name="Network_wifi_h4">Your device is not connected to any Wi-Fi network.\nConnect to Wi-Fi to see network details and speed.</string>
+    <string name="Network_hotspot_h1">Mobile Data and Hotspot</string>
+    <string name="Network_device_h1">Device Connectivity and Networks</string>
+    <string name="Network_c1_offline_t1">Offline</string>
+    <string name="Network_c1_offline_t2">"⬇ 0.0 Kbps"</string>
+    <string name="Network_c1_offline_t3">"⬆ 0.0 Kbps"</string>
+    <string name="Network_c1_Wifi_t1">Wi-Fi Connected</string>
+    <string name="Network_c1_wifi_t2">Wi-Fi</string>
+    <string name="Network_c1_mobiledata_t1">Unknown</string>
+    <string name="Network_c2_nosim_t1">No Active Data SIM</string>
+    <string name="Network_c2_nosim_t2">Unknown Carrier</string>
+    <string name="Network_c2_sim_m1">Mobile Data</string>
+    <string name="Network_c2_sim_t2_o1">Mobile Data: 4G LTE</string>
+    <string name="Network_c2_sim_t2_o2">Mobile Data: 5G</string>
+    <string name="Network_c2_sim_t2_o3">Mobile Data: 3G</string>
+    <string name="Network_c2_sim_t2_o4">Mobile Data: 2G</string>
+    <string name="sim_name_format">%1$s (SIM %2$d)</string>
+    <string name="Network_c2_sim_o1">4G LTE</string>
+    <string name="Network_c2_sim_o2">5G</string>
+    <string name="Network_c2_sim_o3">3G</string>
+    <string name="Network_c2_sim_o4">2G</string>
+    <string name="Network_c2_sim_o5">No Data</string>
+    <string name="Network_c3_t1">Network: %1$s</string>
+    <string name="Network_c3_t2">Roaming: %1$s</string>
+    <string name="Network_c3_on">On</string>
+    <string name="Network_c3_off">Off</string>
+    <string name="Network_c4_mobiledata_status">Mobile Data: %1$s</string>
+    <string name="Network_c4_on">ON</string>
+    <string name="Network_c4_off">OFF</string>
+    <string name="Network_bt_on">Bluetooth: ON — %1$s</string>
+    <string name="Network_bt_off">Bluetooth: OFF</string>
+    <string name="Network_bt_nodevice">No Device</string>
+    <string name="Network_nfc_supported">NFC: Supported</string>
+    <string name="Network_nfc_notsupported">NFC: Not Supported</string>
+    <string name="Network_ping_result">Ping: %1$s ms (to 8.8.8.8)</string>
+    <string name="Network_ping_na">Ping: N/A</string>
+    <string name="Network_publicip">Public IP: %1$s</string>
+    <string name="Network_publicip_na">Public IP: N/A</string>
+    <string name="Network_dns">DNS: %1$s</string>
+    <string name="Network_dns_na">DNS: N/A</string>
+    <string name="Network_wifi_location_disabled">Location Disabled — Cannot get Wi-Fi Name</string>
+    <string name="Network_wifi_permission_denied">Permission Denied — Cannot get Wi-Fi Name</string>
+    <string name="Network_c5_hotspot_status">Hotspot: %1$s</string>
+    <string name="Network_c5_hotspot_on">On</string>
+    <string name="Network_c5_hotspot_off">Off</string>
+
+
+    <string name="sensor_count">Total sensors: %1$d</string>
+    <string name="sensor_details">"Type:               %1$s\nVendor:           %2$s\nVersion:          %3$s\nPower:             %4$s mA\nResolution:     %5$s\nMax Range:    %6$s"</string>
+    <string name="Sensors_H1">Available Sensors</string>
+    <string name="Sensors_message">No sensors found on this device.</string>
+    <string name="Network_c3_wifi_connection">Open</string>
+
+
+    <string name="Main_menu_themes">Theme</string>
+    <string name="Main_menu_language">Language</string>
+
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="tab_processor">Processor</string>
+    <string name="tab_battery">Battery</string>
+    <string name="tab_storage">Storage</string>
+    <string name="tab_display">Display</string>
+    <string name="tab_network">Network</string>
+    <string name="tab_sensors">Sensors</string>
+    <string name="tab_apps">Apps</string>
+
+
+    <string name="changing_language">Changing Language...</string>
+    <string name="applying_theme">Applying Theme...</string>
+    <string name="please_wait">Please wait...</string>
+
+
+
+</resources>

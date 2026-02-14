@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.DeviceInfo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- System bars -->
+        <item name="android:statusBarColor">@color/Dashboard_layout</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <item name="appBackground">@color/black</item>
+
+
+        <item name="toolBar">@color/Dashboard_layout</item>
+
+        <item name="text">@color/Dashboard_text</item>
+
+        <item name="headings">@color/Heading_blue</item>
+
+        <item name="cards">@color/card_bg</item>
+
+        <!-- Sizes -->
+        <item name="textSizeTitle">@dimen/text_size_title</item>
+        <item name="textSizeDetails">@dimen/text_size_details</item>
+        <item name="textSizeHeadings">@dimen/text_size_headings</item>
+
+    </style>
+
+    <style name="Theme.DeviceInfo" parent="Base.Theme.DeviceInfo" />
+</resources>

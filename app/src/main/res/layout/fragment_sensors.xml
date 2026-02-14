@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <!-- No variables for now; using binding directly -->
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        app:cardBackgroundColor="?attr/background">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:text="@string/Sensors_H1"
+                android:textColor="@color/Heading_blue"
+                android:textStyle="bold"
+                android:textSize="?attr/textSizeHeadings"
+                android:padding="10dp" />
+
+            <!-- Installed Apps Count -->
+            <TextView
+                android:id="@+id/sensorCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="end"
+                android:text="No of Sensors: 0"
+                android:textColor="@color/Dashboard_text"
+                android:textSize="?attr/textSizeTitle"
+                android:layout_marginEnd="8dp" />
+        </LinearLayout>
+
+        <!-- Scrollable Sensor List -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="ifContentScrolls">
+
+            <LinearLayout
+                android:id="@+id/sensorListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+</layout>

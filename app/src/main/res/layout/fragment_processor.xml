@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="?attr/background"
+        android:dividerPadding="8dp">
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDeviceInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="?attr/cards"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Processor_c1_h1"
+                    android:textSize="?attr/textSizeHeadings"
+                    android:textStyle="bold"
+                    android:textColor="@color/Heading_blue"
+                    android:layout_marginBottom="12dp" />
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:padding="10dp"
+                        android:gravity="center">
+
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/cpu"
+                            android:contentDescription="CPU Image"
+                            android:layout_marginRight="5dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:padding="5dp">
+
+                        <!-- CPU Model -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Processor_c1_h2"
+                            android:textColor="@color/Heading_blue"
+                            android:textStyle="bold"
+                            android:textSize="?attr/textSizeTitle"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:id="@+id/cpuModelText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Loading..."
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeDetails"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- Architecture -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Processor_c1_h3"
+                            android:textColor="@color/Heading_blue"
+                            android:textStyle="bold"
+                            android:textSize="?attr/textSizeTitle"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:id="@+id/architectureText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Loading..."
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeDetails"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- Core Count -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Processor_c1_h4"
+                            android:textColor="@color/Heading_blue"
+                            android:textStyle="bold"
+                            android:textSize="?attr/textSizeTitle"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:id="@+id/coreCountText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Loading..."
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeDetails"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- Supported ABIs -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Processor_c1_h5"
+                            android:textColor="@color/Heading_blue"
+                            android:textStyle="bold"
+                            android:textSize="?attr/textSizeTitle"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:id="@+id/supportedAbisText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Loading..."
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeDetails"
+                            android:layout_marginBottom="4dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="?attr/cards"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/Processor_c2_h1"
+                    android:textColor="@color/Heading_blue"
+                    android:textSize="?attr/textSizeHeadings"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/coreCluster1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="⚡ Performance (Cortex-X1): 1 Core @ 2.84 GHz"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails" />
+
+                <TextView
+                    android:id="@+id/coreCluster2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="🚀 Performance (Cortex-A78): 3 Cores @ 2.42 GHz"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails" />
+
+                <TextView
+                    android:id="@+id/coreCluster3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="🔋 Efficiency (Cortex-A55): 4 Cores @ 1.8 GHz"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCoreDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="?attr/cards"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/Processor_c3_h1"
+                    android:textColor="@color/Heading_blue"
+                    android:textSize="?attr/textSizeHeadings"
+                    android:textStyle="bold" />
+
+                <!-- Repeat this LinearLayout dynamically for each core -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/coreLabel0"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Processor_c3_h2"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <ProgressBar
+                        android:id="@+id/coreProgress0"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/progress_bar_style" />
+
+                    <TextView
+                        android:id="@+id/corePercent0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60%"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <TextView
+                        android:id="@+id/coreStatus0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="🟢"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/coreLabel1"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Processor_c3_h3"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <ProgressBar
+                        android:id="@+id/coreProgress1"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/progress_bar_style" />
+
+                    <TextView
+                        android:id="@+id/corePercent1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60%"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <TextView
+                        android:id="@+id/coreStatus1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="🟢"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/coreLabel2"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Processor_c3_h4"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <ProgressBar
+                        android:id="@+id/coreProgress2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/progress_bar_style" />
+
+                    <TextView
+                        android:id="@+id/corePercent2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60%"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <TextView
+                        android:id="@+id/coreStatus2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="🟢"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/coreLabel3"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Processor_c3_h5"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <ProgressBar
+                        android:id="@+id/coreProgress3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/progress_bar_style" />
+
+                    <TextView
+                        android:id="@+id/corePercent3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60%"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <TextView
+                        android:id="@+id/coreStatus3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="🟢"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/coreLabel4"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Processor_c3_h6"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <ProgressBar
+                        android:id="@+id/coreProgress4"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/progress_bar_style" />
+
+                    <TextView
+                        android:id="@+id/corePercent4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60%"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <TextView
+                        android:id="@+id/coreStatus4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="🟢"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/coreLabel5"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Processor_c3_h7"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <ProgressBar
+                        android:id="@+id/coreProgress5"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/progress_bar_style" />
+
+                    <TextView
+                        android:id="@+id/corePercent5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60%"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <TextView
+                        android:id="@+id/coreStatus5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="🟢"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/coreLabel6"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Processor_c3_h8"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails"/>
+
+                    <ProgressBar
+                        android:id="@+id/coreProgress6"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/progress_bar_style" />
+
+                    <TextView
+                        android:id="@+id/corePercent6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60%"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails"/>
+
+                    <TextView
+                        android:id="@+id/coreStatus6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="🟢"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/coreLabel7"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Processor_c3_h9"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <ProgressBar
+                        android:id="@+id/coreProgress7"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/progress_bar_style" />
+
+                    <TextView
+                        android:id="@+id/corePercent7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60%"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails" />
+
+                    <TextView
+                        android:id="@+id/coreStatus7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="🟢"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="?attr/cards"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Processor_c4_h1"
+                    android:textSize="?attr/textSizeHeadings"
+                    android:textStyle="bold"
+                    android:textColor="@color/Heading_blue"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- CPU Usage -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/Processor_c4_h2"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/cpuLoadProgress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:progress="60"
+                        android:progressTint="#03A9F4"
+                        android:backgroundTint="@color/Progressbar_background"
+                        android:max="100"
+                        android:minHeight="10dp" />
+
+                    <!-- Percentage text -->
+                    <TextView
+                        android:id="@+id/cpuUsagePercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60%"
+                        android:textSize="?attr/textSizeDetails"
+                        android:textColor="@color/Dashboard_text"
+                        android:layout_marginStart="8dp" />
+
+                </LinearLayout>
+
+                <!-- Load Average -->
+                <TextView
+                    android:id="@+id/loadAverageLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Processor_c4_h3"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/loadAverageValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.03 / 0.76 / 0.45"
+                    android:textColor="@color/holo_green"
+                    android:textSize="?attr/textSizeDetails"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="?attr/cards"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Processor_c5_h1"
+                    android:textSize="?attr/textSizeHeadings"
+                    android:textStyle="bold"
+                    android:textColor="@color/Heading_blue"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/minFreqValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Min Frequency: -- MHz"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/maxFreqValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max Frequency: -- MHz"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/currentFreqValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Frequency (Core 0): -- MHz"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/governorValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Governor: --"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeDetails" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </LinearLayout>
+</ScrollView>
+</layout>

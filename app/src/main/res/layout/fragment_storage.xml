@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="?attr/background"
+        android:dividerPadding="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="?attr/cards"
+            android:layout_marginBottom="15dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp"
+                android:elevation="4dp"
+                android:clipToPadding="false">
+
+                <!-- Top row: RAM Total & Used -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/ramTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="RAM - 2000 MB Total"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeTitle"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/ramUsed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1500 MB Used"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails"/>
+                </LinearLayout>
+
+                <!-- Spacer -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+                <!-- Middle row: Circular progress + Wave -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Circular Progress -->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+                        <ProgressBar
+                            android:id="@+id/batteryProgress"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circular_progress"
+                            android:rotation="-90"
+                            android:layout_centerInParent="true" />
+
+                        <TextView
+                            android:id="@+id/batteryPercentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0%"
+                            android:textSize="20sp"
+                            android:textColor="@color/Dashboard_text"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+                    <!-- Spacer -->
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"/>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/ramWaveChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center" />
+
+
+                </LinearLayout>
+
+                <!-- Spacer -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+                <!-- Bottom row: Free, Cached, Swap -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/ramFree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free: 500 MB"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/apps"
+                app:tint="@color/Runningapp_icon"/>
+
+            <TextView
+                android:id="@+id/runningAppsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Running Apps: 75"
+                android:textColor="@color/Dashboard_text"
+                android:textSize="?attr/textSizeTitle"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/bar_chart"
+                app:tint="@color/Load_icon"/>
+
+            <TextView
+                android:id="@+id/averageUsage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Average Load: 7500"
+                android:textColor="@color/Dashboard_text"
+                android:textSize="?attr/textSizeTitle"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+
+        <!-- Internal Storage Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:textColor="@color/Dashboard_layout"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Storage_internal_h1"
+                android:textSize="?attr/textSizeHeadings"
+                android:textStyle="bold"
+                android:textColor="@color/Heading_blue"
+                android:layout_marginBottom="12dp"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:columnOrderPreserved="false"
+                android:useDefaultMargins="true">
+
+                <!-- Total Space -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_block_blue">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Storage_internal_c1_t1"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/internalTotalSpace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="128 GB"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeTitle"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Used Space -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_block_darkgreen">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Storage_internal_c2_t1"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/internalUsedSpace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="83 GB"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeTitle"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Free Space -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_block_darkpurple">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Storage_internal_c3_t1"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/internalFreeSpace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="45 GB"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeTitle"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Used Percentage -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bg_block_darkorange">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Storage_internal_c4_t1"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeDetails"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/internalStoragePercentage"
+                        android:text="65%"
+                        android:textColor="@color/Dashboard_text"
+                        android:textSize="?attr/textSizeTitle"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </GridLayout>
+            <LinearLayout
+                android:id="@+id/btnAppStorage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_glow_button"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/storage"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Storage_app_botton"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeTitle"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- External Storage Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/Dashboard_layout">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Storage_external_h1"
+                android:textSize="?attr/textSizeHeadings"
+                android:textStyle="bold"
+                android:textColor="@color/Heading_blue"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:id="@+id/externalStorageLayout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="2"
+                    android:columnOrderPreserved="false"
+                    android:useDefaultMargins="true">
+
+                    <!-- Total Space -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_columnWeight="1"
+                        android:gravity="center"
+                        android:background="@drawable/bg_block_darkgreen">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Storage_internal_c1_t1"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeDetails"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/externalTotalSpace"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="64 GB"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeTitle"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                    <!-- Used Space -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_columnWeight="1"
+                        android:gravity="center"
+                        android:background="@drawable/bg_block_darkorange">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Storage_internal_c2_t1"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeDetails"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/externalUsedSpace"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="22 GB"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeTitle"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                    <!-- Free Space -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_columnWeight="1"
+                        android:gravity="center"
+                        android:background="@drawable/bg_block_darkpurple">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Storage_internal_c3_t1"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeDetails"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/externalFreeSpace"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="42 GB"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeTitle"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                    <!-- Used Percentage -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_columnWeight="1"
+                        android:gravity="center"
+                        android:background="@drawable/bg_block_blue">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Storage_internal_c4_t1"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeDetails"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/externalUsedPercentage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="35%"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeTitle"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </GridLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_info_box"
+                    android:elevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Storage_external_c5_t1"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeTitle"
+                            android:layout_marginRight="10dp"/>
+
+                        <TextView
+                            android:id="@+id/externalMountedStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Storage_external_c5_t3"
+                            android:textColor="@color/teal_500"
+                            android:textSize="?attr/textSizeDetails"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="6dp"
+                        android:paddingStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Storage_external_c5_t2"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeTitle"
+                            android:layout_marginRight="10dp"/>
+
+                        <TextView
+                            android:id="@+id/externalPath"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/storage/sdcard1"
+                            android:textColor="@color/teal_500"
+                            android:textSize="?attr/textSizeDetails"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp"
+                    android:padding="12dp"
+                    android:textColor="@color/Dashboard_layout"
+                    android:elevation="1dp"
+                    android:clipToPadding="false">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:layout_marginBottom="15dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Storage_external_c6_h1"
+                            android:textSize="?attr/textSizeTitle"
+                            android:textStyle="bold"
+                            android:textColor="@color/Dashboard_text" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:layout_marginBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/download"
+                            app:tint="@color/Download_icon"
+                            android:layout_marginRight="10dp"/>
+                        <TextView
+                            android:id="@+id/externalDownloadsSize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Downloads: 2.4 GB"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeDetails" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:layout_marginBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/media"
+                            app:tint="@color/Media_icon"
+                            android:layout_marginRight="10dp"/>
+                        <TextView
+                            android:id="@+id/externalMediaSize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Media: 8.7 GB"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeDetails"
+                            android:layout_marginBottom="4dp"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:layout_marginBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/documents"
+                            app:tint="@color/Document_icon"
+                            android:layout_marginRight="10dp"/>
+
+                        <TextView
+                            android:id="@+id/externalDocumentsSize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Documents: 1.3 GB"
+                            android:textColor="@color/Dashboard_text"
+                            android:textSize="?attr/textSizeDetails"/>
+
+                    </LinearLayout>
+
+
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/externalNoStorageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/Dashboard_layout"
+                android:gravity="center"
+                android:elevation="4dp"
+                android:clipToPadding="false">
+
+                <!-- Icon -->
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/sd_card"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Storage_external_c7_t1"
+                    android:textColor="@color/Dashboard_text"
+                    android:textSize="?attr/textSizeTitle"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Storage_external_c7_t2"
+                    android:textColor="@color/Note"
+                    android:textSize="?attr/textSizeDetails"
+                    android:gravity="center"/>
+
+                <!-- Optional: Hint Glow Box -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_glow_divider"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>
+</layout>

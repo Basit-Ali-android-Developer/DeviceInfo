@@ -7,6 +7,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
+import androidx.viewpager2.widget.ViewPager2
 import com.example.deviceinfo.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var loadingDialog: android.app.AlertDialog? = null
 
+    private var selectedTabIndex = 0
+
     override fun attachBaseContext(newBase: Context) {
         val langCode = LocaleHelper.getSavedLanguage(newBase)
         val context = LocaleHelper.setLocale(newBase, langCode)
@@ -22,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Apply saved theme BEFORE super.onCreate()
+
         val prefs = getSharedPreferences("app_settings", MODE_PRIVATE)
         when (prefs.getString("theme", "light")) {
             "light" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -36,12 +39,17 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolBar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
+        selectedTabIndex = savedInstanceState?.getInt("tab_index") ?: 0
+
         val adapter = MainPagerAdapter(this)
         binding.viewPager.adapter = adapter
         binding.viewPager.offscreenPageLimit = adapter.itemCount
 
+        binding.viewPager.currentItem = selectedTabIndex
+
         val tabTitles = arrayOf(
             getString(R.string.tab_dashboard),
+            getString(R.string.tab_deviceinfo),
             getString(R.string.tab_processor),
             getString(R.string.tab_battery),
             getString(R.string.tab_storage),
@@ -54,10 +62,35 @@ class MainActivity : AppCompatActivity() {
         TabLayoutMediator(binding.tab, binding.viewPager) { tab, position ->
             tab.text = tabTitles[position]
         }.attach()
+
+
+        binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                selectedTabIndex = position
+            }
+        })
     }
+
 
     fun switchToPage(position: Int) {
         binding.viewPager.currentItem = position
+    }
+
+
+    override fun onBackPressed() {
+
+        if (binding.viewPager.currentItem != 0) {
+            binding.viewPager.currentItem = 0
+        } else {
+
+            super.onBackPressed()
+        }
+    }
+
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("tab_index", selectedTabIndex)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -84,9 +117,9 @@ class MainActivity : AppCompatActivity() {
             true
         )
 
-        // RADIO GROUP FOR THEME
         val radioGroup = popupView.findViewById<RadioGroup>(R.id.themeRadioGroup)
         val prefs = getSharedPreferences("app_settings", MODE_PRIVATE)
+
         when (prefs.getString("theme", "light")) {
             "light" -> radioGroup.check(R.id.rbLight)
             "custom" -> radioGroup.check(R.id.rbCustom)
@@ -109,7 +142,6 @@ class MainActivity : AppCompatActivity() {
             }, 300)
         }
 
-        // LANGUAGE SPINNER
         val spinner = popupView.findViewById<Spinner>(R.id.popupSpinnerLanguage)
         val languages = arrayOf("English", "اردو", "العربية")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, languages)
@@ -135,6 +167,7 @@ class MainActivity : AppCompatActivity() {
                 if (langCode != LocaleHelper.getSavedLanguage(this@MainActivity)) {
                     showLoader(getString(R.string.changing_language))
                     LocaleHelper.saveLanguagePreference(this@MainActivity, langCode)
+
                     Handler(Looper.getMainLooper()).postDelayed({
                         LocaleHelper.applyLocaleAndRestart(this@MainActivity, langCode)
                     }, 5000)

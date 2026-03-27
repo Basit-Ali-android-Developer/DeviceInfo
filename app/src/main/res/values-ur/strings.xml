@@ -231,6 +231,7 @@
     <string name="tab_dashboard">ڈیش بورڈ</string>
     <string name="tab_processor">پروسیسر</string>
     <string name="tab_battery">بیٹری</string>
+    <string name="tab_deviceinfo">ڈیوائس</string>
     <string name="tab_storage">اسٹوریج</string>
     <string name="tab_display">ڈسپلے</string>
     <string name="tab_network">نیٹ ورک</string>

@@ -224,6 +224,7 @@
     <string name="tab_dashboard">Dashboard</string>
     <string name="tab_processor">Processor</string>
     <string name="tab_battery">Battery</string>
+    <string name="tab_deviceinfo">Device</string>
     <string name="tab_storage">Storage</string>
     <string name="tab_display">Display</string>
     <string name="tab_network">Network</string>

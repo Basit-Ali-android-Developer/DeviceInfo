@@ -214,6 +214,7 @@
     <string name="tab_dashboard">لوحة التحكم</string>
     <string name="tab_processor">المعالج</string>
     <string name="tab_battery">البطارية</string>
+    <string name="tab_deviceinfo">جهاز</string>
     <string name="tab_storage">التخزين</string>
     <string name="tab_display">العرض</string>
     <string name="tab_network">الشبكة</string>

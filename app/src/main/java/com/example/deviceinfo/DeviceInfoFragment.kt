@@ -29,7 +29,7 @@ class DeviceInfoFragment : Fragment() {
         val androidVersionText: TextView = view.findViewById(R.id.androidVersion)
         val apiLevelText: TextView = view.findViewById(R.id.apiLevel)
 
-        // Get device info
+
         deviceNameText.text = "${Build.MANUFACTURER} ${Build.MODEL}"
         manufacturerText.text = "Manufacturer: ${Build.MANUFACTURER}"
         modelText.text = "Model: ${Build.MODEL}"

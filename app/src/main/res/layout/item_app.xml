@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="12dp"
+    android:backgroundTint="?attr/cards">
 
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        card_view:cardCornerRadius="16dp"
-        card_view:cardBackgroundColor="?attr/cards"
-        card_view:cardElevation="4dp">
-
-        <LinearLayout
+     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="12dp"
+            android:padding="16dp"
             android:gravity="center_vertical">
 
             <!-- App Icon -->
@@ -38,7 +39,7 @@
                     android:id="@+id/appName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="App Name"
+                    android:text="-"
                     android:textColor="@color/Dashboard_text"
                     android:textSize="?attr/textSizeTitle"
                     android:textStyle="bold" />
@@ -48,7 +49,7 @@
                     android:id="@+id/appVersion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Version: 1.0.0"
+                    android:text="-"
                     android:textColor="@color/Dashboard_text"
                     android:textSize="?attr/textSizeDetails"
                     android:layout_marginTop="2dp" />
@@ -58,12 +59,11 @@
                     android:id="@+id/appSize"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Storage Used: 256 MB"
+                    android:text="-"
                     android:textColor="@color/details"
                     android:textSize="?attr/textSizeDetails"
                     android:layout_marginTop="2dp" />
             </LinearLayout>
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
-</layout>
+</com.google.android.material.card.MaterialCardView>

@@ -38,7 +38,6 @@ class SensorsFragment : Fragment() {
         // Show total sensor count
         binding.sensorCount.text = getString(R.string.sensor_count, sensorList.size)
 
-        // Clear old views
         binding.sensorListContainer.removeAllViews()
 
         if (sensorList.isEmpty()) {
@@ -50,7 +49,6 @@ class SensorsFragment : Fragment() {
             return
         }
 
-        // Inflate each sensor card with Data Binding
         val inflater = LayoutInflater.from(ctx)
         for (sensor in sensorList) {
             val cardBinding = ItemSensorCardBinding.inflate(inflater, binding.sensorListContainer, false)

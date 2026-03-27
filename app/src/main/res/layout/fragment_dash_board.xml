@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
-
-
-<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="?attr/appBackground">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/appBackground"
-        android:dividerPadding="8dp">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-       <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+        <LinearLayout
             android:id="@+id/cardDeviceInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,13 +45,15 @@
                     android:layout_marginTop="12dp"/>
 
                 <!-- Inner Card for Network Info -->
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
                     app:cardCornerRadius="20dp"
-                    app:cardElevation="8dp"
-                    app:cardBackgroundColor="?attr/cards">
+                    app:cardElevation="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:backgroundTint="?attr/cards">
 
 
                     <LinearLayout
@@ -192,102 +195,107 @@
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="7dp">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
+                        android:layout_marginEnd="5dp"
                         android:layout_weight="1"
                         android:dividerPadding="8dp"
                         android:orientation="vertical">
 
 
-                        <androidx.cardview.widget.CardView
+                        <com.google.android.material.card.MaterialCardView
                             android:id="@+id/cardDeviceRam"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginBottom="20dp"
-                            app:cardBackgroundColor="?attr/cards"
+                            android:layout_margin="5dp"
                             app:cardCornerRadius="20dp"
-                            app:cardElevation="8dp">
+                            app:cardElevation="2dp"
+                            android:backgroundTint="?attr/cards">
 
 
-                        </androidx.cardview.widget.CardView>
+
+
+
 
                         <LinearLayout
-                            android:id="@+id/ramLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="16dp">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/ramLayout"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:fontFamily="sans-serif-medium"
-                                android:textStyle="bold"
-                                android:text="@string/DashBoard_ram_h1"
-                                android:textColor="@color/Dashboard_text"
-                                android:textSize="?attr/textSizeTitle" />
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="16dp">
 
-
-                            <RelativeLayout
-                                android:layout_width="100dp"
-                                android:layout_height="match_parent"
-                                android:gravity="center">
-
-                                <ProgressBar
-                                    android:id="@+id/ramProgress"
-                                    style="?android:attr/progressBarStyleHorizontal"
-                                    android:layout_width="100dp"
-                                    android:layout_height="100dp"
-                                    android:layout_centerInParent="true"
-                                    android:indeterminate="false"
-                                    android:max="100"
-                                    android:progress="70"
-                                    android:progressDrawable="@drawable/circular_progress_yellow"
-                                    android:rotation="-90" />
 
                                 <TextView
-                                    android:id="@+id/ramtext"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:text="60%"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:textStyle="bold"
+                                    android:text="@string/DashBoard_ram_h1"
                                     android:textColor="@color/Dashboard_text"
-                                    android:textSize="20sp" />
+                                    android:textSize="?attr/textSizeTitle" />
 
 
-                            </RelativeLayout>
+                                <RelativeLayout
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center">
 
-                            <TextView
-                                android:id="@+id/ramReadingName"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="8dp"
-                                android:text="@string/DashBoard_ram_t1"
-                                android:textColor="@color/Dashboard_text"
-                                android:textSize="?attr/textSizeDetails"
-                                android:textStyle="bold" />
-                        </LinearLayout>
+                                    <ProgressBar
+                                        android:id="@+id/ramProgress"
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:layout_centerInParent="true"
+                                        android:indeterminate="false"
+                                        android:max="100"
+                                        android:progress="70"
+                                        android:progressDrawable="@drawable/circular_progress_yellow"
+                                        android:rotation="-90" />
+
+                                    <TextView
+                                        android:id="@+id/ramtext"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="60%"
+                                        android:textColor="@color/Dashboard_text"
+                                        android:textSize="20sp" />
 
 
-                        <androidx.cardview.widget.CardView
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/ramReadingName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:text="@string/DashBoard_ram_t1"
+                                    android:textColor="@color/Dashboard_text"
+                                    android:textSize="?attr/textSizeDetails"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginBottom="12dp"
-                            app:cardBackgroundColor="?attr/cards"
                             app:cardCornerRadius="20dp"
-                            app:cardElevation="8dp">
+                            android:layout_margin="5dp"
+                            app:cardElevation="2dp"
+                            android:backgroundTint="?attr/cards">
 
                             <LinearLayout
                                 android:id="@+id/sensorLayout"
@@ -330,7 +338,7 @@
 
                             </LinearLayout>
 
-                        </androidx.cardview.widget.CardView>
+                        </com.google.android.material.card.MaterialCardView>
 
 
                     </LinearLayout>
@@ -338,21 +346,20 @@
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:dividerPadding="8dp"
                         android:orientation="vertical">
 
 
-                        <androidx.cardview.widget.CardView
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginBottom="12dp"
-                            app:cardBackgroundColor="?attr/cards"
                             app:cardCornerRadius="20dp"
-                            app:cardElevation="8dp">
-
+                            app:cardElevation="2dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="?attr/cards">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -393,24 +400,29 @@
                                     android:textColor="#AAAAAA"
                                     android:textSize="?attr/textSizeDetails" />
                             </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+
+                        </com.google.android.material.card.MaterialCardView>
 
 
                     </LinearLayout>
 
 
                 </LinearLayout>
+
             </LinearLayout>
         </LinearLayout>
 
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="8dp"
-            app:cardBackgroundColor="?attr/cards">>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="?attr/cards">
 
             <LinearLayout
                 android:id="@+id/storageLayout"
@@ -505,15 +517,19 @@
 
                 </LinearLayout>
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="8dp"
-            app:cardBackgroundColor="?attr/cards"
-            android:layout_marginBottom="12dp">
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="?attr/cards">
 
             <LinearLayout
                 android:id="@+id/processorLayout"
@@ -572,10 +588,13 @@
 
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
+            </com.google.android.material.card.MaterialCardView>
 
 
 
     </LinearLayout>
-</ScrollView>
-</layout>
+
+
+</androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

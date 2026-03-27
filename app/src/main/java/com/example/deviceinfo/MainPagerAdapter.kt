@@ -8,7 +8,7 @@ class MainPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
 
     private val fragments = listOf(
         DashBoardFragment(),
-        DeviceInfoFragment(),
+        DeviceFragment(),
         ProcessorFragment(),
         BatteryFragment(),
         StorageFragment(),

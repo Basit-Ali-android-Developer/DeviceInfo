@@ -23,71 +23,57 @@ import kotlin.math.roundToInt
 
 class StorageFragment : Fragment() {
 
-    private lateinit var handler: Handler
-    private lateinit var runnable: Runnable
+    private var _binding: FragmentStorageBinding? = null
+    private val binding get() = _binding!!
 
     private val waveEntries = ArrayList<Entry>()
     private var time = 0f
-
-
     private val usageHistory = mutableListOf<Float>()
 
-
-
-    private lateinit var binding : FragmentStorageBinding
+    private lateinit var waveDataSet: LineDataSet
+    private val handler = Handler(Looper.getMainLooper())
+    private val updateRunnable = object : Runnable {
+        override fun run() {
+            _binding?.let {
+                displayRamInfo()
+                updateWaveChart()
+            }
+            handler.postDelayed(this, 5000)
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentStorageBinding.inflate(inflater,container, false)
-
-
+        _binding = FragmentStorageBinding.inflate(inflater, container, false)
         setupChart()
-
-
         return binding.root
-    }
-
-    fun loadFragmentAtPosition(position: Int) {
-        (activity as? MainActivity)?.switchToPage(position)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         displayRamInfo()
-
-        handler = Handler(Looper.getMainLooper())
-        runnable = object : Runnable {
-            override fun run() {
-                displayRamInfo()
-                updateWaveChart()
-                handler.postDelayed(this, 5000) // update every 5 sec
-            }
-        }
-        handler.post(runnable)
+        handler.post(updateRunnable) // start updates
 
         showInternalStorage()
         showExternalStorage()
 
         binding.btnAppStorage.setOnClickListener { v ->
-            val ctx = context ?: return@setOnClickListener
-            v.startAnimation(AnimationUtils.loadAnimation(ctx, android.R.anim.fade_in))
-            loadFragmentAtPosition(7) // Network tab
+            v.startAnimation(AnimationUtils.loadAnimation(requireContext(), android.R.anim.fade_in))
+            (activity as? MainActivity)?.switchToPage(7) // Network tab
         }
     }
 
     private fun displayRamInfo() {
-        val ctx = context ?: return
-        val activityManager = ctx.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+        val activityManager = requireContext().getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
         val memoryInfo = ActivityManager.MemoryInfo()
         activityManager.getMemoryInfo(memoryInfo)
 
         val totalRamMB = memoryInfo.totalMem / (1024 * 1024)
         val usedRamMB = totalRamMB - (memoryInfo.availMem / (1024 * 1024))
         val freeRamMB = memoryInfo.availMem / (1024 * 1024)
-
         val usedPercentage = ((usedRamMB.toFloat() / totalRamMB.toFloat()) * 100).toInt()
 
         binding.ramTitle.text = getString(R.string.ram_title, totalRamMB)
@@ -100,8 +86,6 @@ class StorageFragment : Fragment() {
         val runningAppCount = activityManager.runningAppProcesses?.size ?: 0
         binding.runningAppsCount.text = getString(R.string.running_apps_count, runningAppCount)
 
-
-
         usageHistory.add(usedPercentage.toFloat())
         if (usageHistory.size > 10) usageHistory.removeAt(0)
         val avgUsage = usageHistory.average().roundToInt()
@@ -109,21 +93,32 @@ class StorageFragment : Fragment() {
     }
 
     private fun setupChart() {
-        with(binding) {
-            ramWaveChart.axisLeft.isEnabled = false
-            ramWaveChart.axisRight.isEnabled = false
-            ramWaveChart.xAxis.isEnabled = false
-            ramWaveChart.legend.isEnabled = false
-            ramWaveChart.setTouchEnabled(false)
-            ramWaveChart.setScaleEnabled(false)
-            ramWaveChart.description = Description().apply { text = "" }
-            ramWaveChart.setNoDataText("")
+        waveDataSet = LineDataSet(ArrayList(), "RAM Usage").apply {
+            color = ContextCompat.getColor(requireContext(), R.color.Chart_filler)
+            lineWidth = 2f
+            setDrawCircles(false)
+            setDrawValues(false)
+            mode = LineDataSet.Mode.CUBIC_BEZIER
+            setDrawFilled(true)
+            fillColor = ContextCompat.getColor(requireContext(), R.color.Chart_filler)
+            fillAlpha = 150
+        }
+
+        binding.ramWaveChart.apply {
+            data = LineData(waveDataSet)
+            axisLeft.isEnabled = false
+            axisRight.isEnabled = false
+            xAxis.isEnabled = false
+            legend.isEnabled = false
+            setTouchEnabled(false)
+            setScaleEnabled(false)
+            description = Description().apply { text = "" }
+            setNoDataText("")
         }
     }
 
     private fun updateWaveChart() {
-        val ctx = context ?: return
-        val activityManager = ctx.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+        val activityManager = requireContext().getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
         val memoryInfo = ActivityManager.MemoryInfo()
         activityManager.getMemoryInfo(memoryInfo)
 
@@ -132,40 +127,25 @@ class StorageFragment : Fragment() {
         val usedPercentage = ((usedRamMB.toFloat() / totalRamMB.toFloat()) * 100)
 
         time += 1f
-        waveEntries.add(Entry(time, usedPercentage))
+        waveDataSet.addEntry(Entry(time, usedPercentage))
 
-        if (waveEntries.size > 30) {
-            waveEntries.removeAt(0)
-            for (i in waveEntries.indices) {
-                waveEntries[i].x = i.toFloat()
+        if (waveDataSet.entryCount > 30) {
+            waveDataSet.removeFirst()
+            for (i in 0 until waveDataSet.entryCount) {
+                waveDataSet.getEntryForIndex(i).x = i.toFloat()
             }
         }
 
-        val fillColorInt = ContextCompat.getColor(ctx, R.color.Chart_filler)
-
-        val dataSet = LineDataSet(waveEntries, "RAM Usage").apply {
-            color = fillColorInt
-            lineWidth = 2f
-            setDrawCircles(false)
-            setDrawValues(false)
-            mode = LineDataSet.Mode.CUBIC_BEZIER
-            setDrawFilled(true)
-            fillColor = fillColorInt
-            fillAlpha = 150
-        }
-
-        binding.ramWaveChart.data = LineData(dataSet)
+        waveDataSet.notifyDataSetChanged()
+        binding.ramWaveChart.data.notifyDataChanged()
+        binding.ramWaveChart.notifyDataSetChanged()
         binding.ramWaveChart.invalidate()
     }
 
     private fun showInternalStorage() {
         val stat = StatFs(Environment.getDataDirectory().path)
-        val blockSize = stat.blockSizeLong
-        val totalBlocks = stat.blockCountLong
-        val availableBlocks = stat.availableBlocksLong
-
-        val totalBytes = totalBlocks * blockSize
-        val freeBytes = availableBlocks * blockSize
+        val totalBytes = stat.blockCountLong * stat.blockSizeLong
+        val freeBytes = stat.availableBlocksLong * stat.blockSizeLong
         val usedBytes = totalBytes - freeBytes
 
         val totalGB = totalBytes / (1024.0 * 1024 * 1024)
@@ -173,30 +153,19 @@ class StorageFragment : Fragment() {
         val usedGB = usedBytes / (1024.0 * 1024 * 1024)
         val usedPercent = if (totalBytes > 0) ((usedBytes.toDouble() / totalBytes) * 100).toInt() else 0
 
-        with(binding){
-
-            internalFreeSpace.text = String.format("%.1f GB", freeGB)
-            internalTotalSpace.text = String.format("%.1f GB", totalGB)
-            internalUsedSpace.text = String.format("%.1f GB", usedGB)
-            internalStoragePercentage.text = "$usedPercent%"
-
-        }
+        binding.internalFreeSpace.text = String.format("%.1f GB", freeGB)
+        binding.internalTotalSpace.text = String.format("%.1f GB", totalGB)
+        binding.internalUsedSpace.text = String.format("%.1f GB", usedGB)
+        binding.internalStoragePercentage.text = "$usedPercent%"
     }
 
     private fun showExternalStorage() {
-        val ctx = context ?: return
-        val externalDirs = ctx.getExternalFilesDirs(null)
-
+        val externalDirs = requireContext().getExternalFilesDirs(null)
         if (externalDirs.size > 1 && externalDirs[1] != null) {
             val externalDir = externalDirs[1]!!
             val stat = StatFs(externalDir.path)
-
-            val blockSize = stat.blockSizeLong
-            val totalBlocks = stat.blockCountLong
-            val availableBlocks = stat.availableBlocksLong
-
-            val totalBytes = totalBlocks * blockSize
-            val freeBytes = availableBlocks * blockSize
+            val totalBytes = stat.blockCountLong * stat.blockSizeLong
+            val freeBytes = stat.availableBlocksLong * stat.blockSizeLong
             val usedBytes = totalBytes - freeBytes
 
             val totalGB = totalBytes / (1024.0 * 1024 * 1024)
@@ -204,58 +173,49 @@ class StorageFragment : Fragment() {
             val usedGB = usedBytes / (1024.0 * 1024 * 1024)
             val usedPercent = ((usedBytes.toDouble() / totalBytes.toDouble()) * 100).toInt()
 
-            with(binding) {
-                externalTotalSpace.text = String.format("%.1f GB", totalGB)
-                externalUsedSpace.text = String.format("%.1f GB", usedGB)
-                externalFreeSpace.text = String.format("%.1f GB", freeGB)
-                externalUsedPercentage.text = "$usedPercent%"
-            }
-
+            binding.externalTotalSpace.text = String.format("%.1f GB", totalGB)
+            binding.externalUsedSpace.text = String.format("%.1f GB", usedGB)
+            binding.externalFreeSpace.text = String.format("%.1f GB", freeGB)
+            binding.externalUsedPercentage.text = "$usedPercent%"
             binding.externalPath.text = externalDir.path
 
-            binding.externalDownloadsSize.text = getString(
-                R.string.external_downloads_size,
-                getFolderSize(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS))
-            )
-
-            binding.externalMediaSize.text = getString(
-                R.string.external_media_size,
-                getFolderSize(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES))
-            )
-
-            binding.externalDocumentsSize.text = getString(
-                R.string.external_documents_size,
-                getFolderSize(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS))
-            )
+            // Folder sizes calculated in background to prevent UI freeze
+            getFolderSizeAsync(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)) {
+                binding.externalDownloadsSize.text = getString(R.string.external_downloads_size, it)
+            }
+            getFolderSizeAsync(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)) {
+                binding.externalMediaSize.text = getString(R.string.external_media_size, it)
+            }
+            getFolderSizeAsync(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)) {
+                binding.externalDocumentsSize.text = getString(R.string.external_documents_size, it)
+            }
 
             binding.externalStorageLayout.visibility = View.VISIBLE
             binding.externalNoStorageLayout.visibility = View.GONE
-
         } else {
             binding.externalStorageLayout.visibility = View.GONE
             binding.externalNoStorageLayout.visibility = View.VISIBLE
         }
     }
 
-    private fun getFolderSize(dir: File?): String {
-        if (dir == null || !dir.exists()) return "0.0"
-        var size = 0L
-        dir.listFiles()?.forEach { file ->
-            size += if (file.isFile) file.length() else getFolderSizeBytes(file)
+    private fun getFolderSizeAsync(dir: File?, callback: (String) -> Unit) {
+        if (dir == null || !dir.exists()) {
+            callback("0.0")
+            return
         }
-        return String.format("%.1f", size / (1024.0 * 1024.0 * 1024.0))
+        Thread {
+            val size = getFolderSizeBytes(dir)
+            val result = String.format("%.1f", size / (1024.0 * 1024.0 * 1024.0))
+            requireActivity().runOnUiThread { callback(result) }
+        }.start()
     }
 
-    private fun getFolderSizeBytes(dir: File): Long {
-        var size = 0L
-        dir.listFiles()?.forEach { file ->
-            size += if (file.isFile) file.length() else getFolderSizeBytes(file)
-        }
-        return size
-    }
+    private fun getFolderSizeBytes(dir: File): Long =
+        dir.listFiles()?.sumOf { if (it.isFile) it.length() else getFolderSizeBytes(it) } ?: 0L
 
     override fun onDestroyView() {
         super.onDestroyView()
-        handler.removeCallbacks(runnable)
+        handler.removeCallbacks(updateRunnable)
+        _binding = null
     }
 }

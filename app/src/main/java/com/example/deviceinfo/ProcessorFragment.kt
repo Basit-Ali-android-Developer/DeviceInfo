@@ -24,7 +24,8 @@ class ProcessorFragment : Fragment() {
     private lateinit var handler: Handler
     private lateinit var runnable: Runnable
 
-    private lateinit var binding: FragmentProcessorBinding
+    private var _binding: FragmentProcessorBinding? = null
+    private val binding get() = _binding!!
 
     private lateinit var coreProgressBars: List<android.widget.ProgressBar>
     private lateinit var corePercents: List<android.widget.TextView>
@@ -35,14 +36,14 @@ class ProcessorFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentProcessorBinding.inflate(inflater, container, false)
+        _binding = FragmentProcessorBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // ✅ Initialize all lists using binding instead of findViewById
+
         coreProgressBars = listOf(
             binding.coreProgress0,
             binding.coreProgress1,
@@ -93,10 +94,12 @@ class ProcessorFragment : Fragment() {
         handler = Handler(Looper.getMainLooper())
         runnable = object : Runnable {
             override fun run() {
-                startUpdatingCoreUsage()
-                updateCpuInfo()
-                updateLoadAverage()
-                updateCpuFrequencyInfo()
+                _binding?.let {
+                    startUpdatingCoreUsage()
+                    updateCpuInfo()
+                    updateLoadAverage()
+                    updateCpuFrequencyInfo()
+                }
                 handler.postDelayed(this, 4000)
             }
         }
@@ -267,6 +270,13 @@ class ProcessorFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        handler.removeCallbacks(runnable)
+        handler.removeCallbacksAndMessages(null)
+
+        coreProgressBars = emptyList()
+        corePercents = emptyList()
+        coreStatuses = emptyList()
+        coreLabels = emptyList()
+
+        _binding = null
     }
 }

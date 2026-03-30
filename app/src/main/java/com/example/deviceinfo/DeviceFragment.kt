@@ -35,11 +35,15 @@ class DeviceFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        loadSensorDetails()
+
 
         handler = Handler(Looper.getMainLooper())
         runnable = object : Runnable {
             override fun run() {
-                loadUpTime()
+                _binding?.let {
+                    loadUpTime()
+                }
                 handler.postDelayed(this, 1000)
             }
         }
@@ -47,11 +51,11 @@ class DeviceFragment : Fragment() {
 
     }
 
-    override fun onResume() {
-        super.onResume()
-
-        loadSensorDetails()
-    }
+//    override fun onResume() {
+//        super.onResume()
+//
+//        loadSensorDetails()
+//    }
 
     private fun  loadSensorDetails(){
 
@@ -101,8 +105,9 @@ class DeviceFragment : Fragment() {
     }
 
 
-        override fun onDestroyView() {
+    override fun onDestroyView() {
         super.onDestroyView()
+        handler.removeCallbacksAndMessages(null)
         _binding = null
     }
 

@@ -30,20 +30,16 @@ class DashBoardFragment : Fragment() {
     private lateinit var handler: Handler
     private lateinit var runnable: Runnable
 
-
-
     private var previousRxBytes: Long = 0
 
-
-
-    private lateinit var binding : FragmentDashBoardBinding
+    private var _binding: FragmentDashBoardBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDashBoardBinding.inflate(inflater, container, false)
-
+        _binding = FragmentDashBoardBinding.inflate(inflater, container, false)
 
         previousRxBytes = TrafficStats.getTotalRxBytes()
 
@@ -74,9 +70,11 @@ class DashBoardFragment : Fragment() {
         handler = Handler(Looper.getMainLooper())
         runnable = object : Runnable {
             override fun run() {
-                loadBatteryLevel()
-                loadNetworkInfo()
-                updateCpuInfo()
+                _binding?.let {
+                    loadBatteryLevel()
+                    loadNetworkInfo()
+                    updateCpuInfo()
+                }
                 handler.postDelayed(this, 2000)
             }
         }
@@ -299,6 +297,7 @@ class DashBoardFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        handler.removeCallbacks(runnable)
+        handler.removeCallbacksAndMessages(null)
+        _binding = null
     }
 }

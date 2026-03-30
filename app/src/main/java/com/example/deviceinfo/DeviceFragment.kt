@@ -106,7 +106,6 @@ class DeviceFragment : Fragment() {
         _binding = null
     }
 
-    // ---------------- Helper Functions ----------------
 
     private fun getDeviceType(): String {
         val screenLayout = resources.configuration.screenLayout

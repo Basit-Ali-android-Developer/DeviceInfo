@@ -3,7 +3,7 @@
     android:layout_height="150dp"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/loader_bg"
+    android:backgroundTint="?attr/cards"
     android:padding="20dp">
 
     <ProgressBar
@@ -15,7 +15,7 @@
         android:id="@+id/loaderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
+        android:textColor="@color/Dashboard_text"
         android:textSize="16sp"
         android:layout_marginTop="12dp"/>
 </LinearLayout>

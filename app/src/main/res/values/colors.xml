@@ -80,6 +80,10 @@
     <color name="back">#26F7FD</color>
     <color name="card">#B0E0E6</color>
 
+    <color name="switch_thumb_color">#FFFFFF</color> <!-- always white -->
+    <color name="switch_track_off">#BDBDBD</color> <!-- grey for off -->
+    <color name="switch_track_on">#4CAF50</color> <!-- green for ON -->
+
 
 
 

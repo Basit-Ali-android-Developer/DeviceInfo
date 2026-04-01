@@ -1,4 +1,4 @@
-package com.example.deviceinfo
+package com.example.deviceinfo.storage
 
 import android.app.ActivityManager
 import android.content.Context
@@ -13,6 +13,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.core.content.ContextCompat
+import com.example.deviceinfo.navigation.MainActivity
+import com.example.deviceinfo.R
 import com.example.deviceinfo.databinding.FragmentStorageBinding
 import com.github.mikephil.charting.components.Description
 import com.github.mikephil.charting.data.Entry

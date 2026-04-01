@@ -39,7 +39,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="📱 Device Overview"
+                        android:text="Device Overview"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/Heading_blue"
@@ -222,7 +222,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="📦 System  Kernel"
+                        android:text="System  Kernel"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/Heading_blue"
@@ -362,7 +362,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="🔒 Security Features"
+                        android:text="Security Features"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/Heading_blue"
@@ -478,7 +478,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="⚙️ Hardware Features"
+                        android:text="Hardware Features"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/Heading_blue"

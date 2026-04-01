@@ -1,4 +1,4 @@
-package com.example.deviceinfo
+package com.example.deviceinfo.dashboard
 
 data class DashboardItem(
     val title: String,

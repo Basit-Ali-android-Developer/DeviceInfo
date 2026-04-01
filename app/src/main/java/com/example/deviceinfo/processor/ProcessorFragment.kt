@@ -1,4 +1,4 @@
-package com.example.deviceinfo
+package com.example.deviceinfo.processor
 
 import android.annotation.SuppressLint
 import android.app.ActivityManager
@@ -12,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import com.example.deviceinfo.R
 import com.example.deviceinfo.databinding.FragmentProcessorBinding
 import java.io.BufferedReader
 import java.io.File

@@ -1,8 +1,9 @@
-package com.example.deviceinfo
+package com.example.deviceinfo.navigation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.deviceinfo.R
 import com.example.deviceinfo.databinding.ItemAppBinding
 
 class AppsAdapter(

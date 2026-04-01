@@ -1,35 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    >
-
-
-<LinearLayout
     android:orientation="vertical"
     android:background="?attr/appBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".navigation.MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layoutDirection="ltr"
-        android:textDirection="ltr">
-
-    <!-- Toolbar with title and menu icon -->
+    <!-- Toolbar with title and settings icon -->
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tool_Bar"
+        android:id="@+id/toolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/toolBar"
+        android:layoutDirection="ltr"
+        android:textDirection="ltr"
         android:padding="10dp">
 
-        <!-- Centered Title -->
         <TextView
             android:id="@+id/toolbarTitle"
             android:layout_width="wrap_content"
@@ -38,12 +28,17 @@
             android:textSize="20sp"
             android:textColor="?attr/text"
             android:fontFamily="sans-serif-medium"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"/>
 
+        <ImageView
+            android:id="@+id/btnGoToSettings"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/settingsvg"
+            app:tint="?attr/text"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"/>
     </androidx.appcompat.widget.Toolbar>
-
-    </LinearLayout>
-
 
     <!-- Top Navigation Tabs -->
     <com.google.android.material.tabs.TabLayout
@@ -56,11 +51,10 @@
         app:tabTextColor="?attr/text"
         app:tabSelectedTextColor="@color/Heading_blue"/>
 
+    <!-- ViewPager2 for pages -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
-
 </LinearLayout>
-</layout>

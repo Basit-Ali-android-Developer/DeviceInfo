@@ -1,4 +1,4 @@
-package com.example.deviceinfo
+package com.example.deviceinfo.display
 
 import android.annotation.SuppressLint
 import android.content.ContentResolver
@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.deviceinfo.R
 import com.example.deviceinfo.databinding.FragmentDisplayBinding
 import kotlin.math.pow
 import kotlin.math.sqrt

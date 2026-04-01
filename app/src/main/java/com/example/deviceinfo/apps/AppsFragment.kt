@@ -1,4 +1,4 @@
-package com.example.deviceinfo
+package com.example.deviceinfo.apps
 
 import android.content.Intent
 import android.content.pm.ApplicationInfo
@@ -12,7 +12,10 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.deviceinfo.navigation.AppsAdapter
+import com.example.deviceinfo.R
 import com.example.deviceinfo.databinding.FragmentAppsBinding
+import com.example.deviceinfo.navigation.AppInfo
 import java.io.File
 
 class AppsFragment : Fragment() {

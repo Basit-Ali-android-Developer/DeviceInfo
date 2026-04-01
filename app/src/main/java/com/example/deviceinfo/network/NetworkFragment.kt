@@ -1,4 +1,4 @@
-package com.example.deviceinfo
+package com.example.deviceinfo.network
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -21,6 +21,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.deviceinfo.R
 import com.example.deviceinfo.databinding.FragmentNetworkBinding
 import java.net.URL
 
@@ -243,15 +244,22 @@ class NetworkFragment : Fragment() {
             when (tm.dataNetworkType) {
                 TelephonyManager.NETWORK_TYPE_LTE -> getString(R.string.Network_c2_sim_o1)
                 TelephonyManager.NETWORK_TYPE_NR -> getString(R.string.Network_c2_sim_o2)
-                TelephonyManager.NETWORK_TYPE_HSPA, TelephonyManager.NETWORK_TYPE_HSPAP -> getString(R.string.Network_c2_sim_o3)
-                TelephonyManager.NETWORK_TYPE_EDGE, TelephonyManager.NETWORK_TYPE_GPRS -> getString(R.string.Network_c2_sim_o4)
+                TelephonyManager.NETWORK_TYPE_HSPA, TelephonyManager.NETWORK_TYPE_HSPAP -> getString(
+                    R.string.Network_c2_sim_o3
+                )
+                TelephonyManager.NETWORK_TYPE_EDGE, TelephonyManager.NETWORK_TYPE_GPRS -> getString(
+                    R.string.Network_c2_sim_o4
+                )
                 TelephonyManager.NETWORK_TYPE_UNKNOWN -> getString(R.string.Network_c2_sim_o5)
                 else -> getString(R.string.Network_c1_mobiledata_t1)
             }
         } else getString(R.string.Display_cutout_o2)
 
         tvNetwork.text = getString(R.string.Network_c3_t1, networkType)
-        tvRoaming.text = getString(R.string.Network_c3_t2, if (tm.isNetworkRoaming) getString(R.string.Network_c3_on) else getString(R.string.Network_c3_off))
+        tvRoaming.text = getString(
+            R.string.Network_c3_t2, if (tm.isNetworkRoaming) getString(R.string.Network_c3_on) else getString(
+                R.string.Network_c3_off
+            ))
     }
 
     private fun showNoSimLayout() {

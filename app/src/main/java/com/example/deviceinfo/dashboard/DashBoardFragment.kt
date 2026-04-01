@@ -1,4 +1,4 @@
-package com.example.deviceinfo
+package com.example.deviceinfo.dashboard
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -20,6 +20,8 @@ import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.deviceinfo.navigation.MainActivity
+import com.example.deviceinfo.R
 import com.example.deviceinfo.databinding.FragmentDashBoardBinding
 import java.io.File
 

@@ -1,4 +1,4 @@
-package com.example.deviceinfo
+package com.example.deviceinfo.navigation
 
 data class AppInfo(
     val name: String,

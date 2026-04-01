@@ -1,4 +1,4 @@
-package com.example.deviceinfo
+package com.example.deviceinfo.deviceinfo
 
 import android.app.KeyguardManager
 import android.content.Context

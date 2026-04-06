@@ -219,4 +219,68 @@
     <string name="please_wait">Please wait...</string>
 
 
+    <string name="setting_theme_text">Dark Mode</string>
+    <string name="setting_language">Language</string>
+    <string name="setting_feedback">FeedBack</string>
+    <string name="setting_about">About Us</string>
+
+
+    <string name="about_dialog_title">Device Info</string>
+    <string name="about_dialog_version">Version 1.0</string>
+    <string name="about_dialog_developer">Developed by Me 😉</string>
+    <string name="about_dialog_button">Close</string>
+
+
+    <string name="device_t1">Device Overview</string>
+    <string name="device_t2">System &amp; Kernel</string>
+    <string name="device_t3">Security Features</string>
+    <string name="device_t4">Hardware Features</string>
+
+    <string name="device_l1_t1">Device Name</string>
+    <string name="device_l1_t2">Manufacturer</string>
+    <string name="device_l1_t3">Device Type</string>
+    <string name="device_l1_t4">Android Version</string>
+    <string name="device_l1_t5">SDK Level</string>
+    <string name="device_l1_t6">Build Number</string>
+    <string name="device_l1_t7">Security Patch</string>
+
+
+    <string name="device_l2_t1">Kernel Version</string>
+    <string name="device_l2_t2">Baseband</string>
+    <string name="device_l2_t3">Language</string>
+    <string name="device_l2_t4">Timezone</string>
+    <string name="device_l2_t5">Uptime</string>
+
+    <string name="device_l3_t1">Screen Lock</string>
+    <string name="device_l3_t2">Biometric</string>
+    <string name="device_l3_t3">Encryption</string>
+    <string name="device_l3_t4">Play Services</string>
+
+
+    <string name="device_l4_t1">NFC</string>
+    <string name="device_l4_t2">GPS</string>
+    <string name="device_l4_t3">Camera</string>
+
+    <string name="device_type_phone">Phone</string>
+    <string name="device_type_tablet">Tablet</string>
+
+    <string name="screen_lock_pin">PIN / Pattern / Password</string>
+    <string name="screen_lock_none">None</string>
+
+    <string name="biometric_yes">Yes</string>
+    <string name="biometric_no">No</string>
+
+    <string name="encryption_enabled">Enabled</string>
+    <string name="encryption_disabled">Disabled</string>
+
+    <string name="playservices_installed">Installed</string>
+    <string name="playservices_not_installed">Not Installed</string>
+
+
+
+
+
+
+
+
 </resources>

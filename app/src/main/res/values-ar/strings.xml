@@ -227,5 +227,61 @@
     <string name="please_wait">...يرجى الانتظار</string>
 
 
+    <string name="setting_theme_text">الوضع المظلم</string>
+    <string name="setting_language">لغة</string>
+    <string name="setting_feedback">تعليق</string>
+    <string name="setting_about">معلومات عنا</string>
+
+    <string name="about_dialog_title">معلومات الجهاز</string>
+    <string name="about_dialog_version">الإصدار 1.0</string>
+    <string name="about_dialog_developer">تم تطويره بواسطة</string>
+    <string name="about_dialog_button">يغلق</string>
+
+
+    <string name="device_t1">نظرة عامة على الجهاز</string>
+    <string name="device_t2">النظام &amp; النواة</string>
+    <string name="device_t3">ميزات الأمان</string>
+    <string name="device_t4">ميزات الأجهزة</string>
+
+    <string name="device_l1_t1">اسم الجهاز</string>
+    <string name="device_l1_t2">الشركة المصنعة</string>
+    <string name="device_l1_t3">نوع الجهاز</string>
+    <string name="device_l1_t4">إصدار أندرويد</string>
+    <string name="device_l1_t5">مستوى SDK</string>
+    <string name="device_l1_t6">رقم البناء</string>
+    <string name="device_l1_t7">تصحيح الأمان</string>
+
+
+    <string name="device_l2_t1">إصدار النواة</string>
+    <string name="device_l2_t2">القاعدة الأساسية</string>
+    <string name="device_l2_t3">اللغة</string>
+    <string name="device_l2_t4">المنطقة الزمنية</string>
+    <string name="device_l2_t5">مدة التشغيل</string>
+
+    <string name="device_l3_t1">قفل الشاشة</string>
+    <string name="device_l3_t2">القياسات الحيوية</string>
+    <string name="device_l3_t3">التشفير</string>
+    <string name="device_l3_t4">خدمات Google Play</string>
+
+    <string name="device_l4_t1">إن إف سي</string>
+    <string name="device_l4_t2">نظام تحديد المواقع</string>
+    <string name="device_l4_t3">الكاميرا</string>
+
+    <string name="device_type_phone">&#x202B;هاتف&#x202C;</string>
+    <string name="device_type_tablet">&#x202B;جهاز لوحي&#x202C;</string>
+
+    <string name="screen_lock_pin">&#x202B;رمز PIN / نمط / كلمة المرور&#x202C;</string>
+    <string name="screen_lock_none">&#x202B;لا شيء&#x202C;</string>
+
+    <string name="biometric_yes">&#x202B;نعم&#x202C;</string>
+    <string name="biometric_no">&#x202B;لا&#x202C;</string>
+
+    <string name="encryption_enabled">&#x202B;مُمكّن&#x202C;</string>
+    <string name="encryption_disabled">&#x202B;معطّل&#x202C;</string>
+
+    <string name="playservices_installed">&#x202B;مثبت&#x202C;</string>
+    <string name="playservices_not_installed">&#x202B;غير مثبت&#x202C;</string>
+
+
 
 </resources>

@@ -20,9 +20,6 @@ class AboutDialog(context: Context) : Dialog(context) {
 
         setCancelable(true)
 
-        binding.tvAppName.text = "Device Info"
-        binding.tvVersion.text = "Version 1.0"
-        binding.tvDeveloper.text = "Developed by You 😉"
 
 
         val width = (context.resources.displayMetrics.widthPixels * 0.9).toInt()

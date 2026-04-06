@@ -12,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.deviceinfo.R
 import com.example.deviceinfo.databinding.FragmentDeviceBinding
 import java.util.*
 
@@ -84,15 +85,48 @@ class DeviceFragment : Fragment() {
             timezone.text = TimeZone.getDefault().id
 
             // ---------------- Security & Features ----------------
-            screenLock.text = if (km.isKeyguardSecure) "PIN / Pattern / Password" else "None"
-            biometric.text = if (hasBiometric(pm)) "Yes" else "No"
-            encryption.text = if (isDeviceEncrypted(km)) "Enabled" else "Disabled"
-            playServices.text = if (isGooglePlayServicesAvailable(pm)) "Installed" else "Not Installed"
+            screenLock.text = if (km.isKeyguardSecure) {
+                getString(R.string.screen_lock_pin)
+            } else {
+                getString(R.string.screen_lock_none)
+            }
+
+            biometric.text = if (hasBiometric(pm)) {
+                getString(R.string.biometric_yes)
+            } else {
+                getString(R.string.biometric_no)
+            }
+
+            encryption.text = if (isDeviceEncrypted(km)) {
+                getString(R.string.encryption_enabled)
+            } else {
+                getString(R.string.encryption_disabled)
+            }
+
+            playServices.text = if (isGooglePlayServicesAvailable(pm)) {
+                getString(R.string.playservices_installed)
+            } else {
+                getString(R.string.playservices_not_installed)
+            }
 
             // ---------------- Hardware Features ----------------
-            nfc.text = if (pm.hasSystemFeature(PackageManager.FEATURE_NFC)) "Yes" else "No"
-            gps.text = if (pm.hasSystemFeature(PackageManager.FEATURE_LOCATION_GPS)) "Yes" else "No"
-            camera.text = if (pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_ANY)) "Yes" else "No"
+            nfc.text = if (pm.hasSystemFeature(PackageManager.FEATURE_NFC)) {
+                getString(R.string.biometric_yes)
+            } else {
+                getString(R.string.biometric_no)
+            }
+
+            gps.text = if (pm.hasSystemFeature(PackageManager.FEATURE_LOCATION_GPS)) {
+                getString(R.string.biometric_yes)
+            } else {
+                getString(R.string.biometric_no)
+            }
+
+            camera.text = if (pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_ANY)) {
+                getString(R.string.biometric_yes)
+            } else {
+                getString(R.string.biometric_no)
+            }
         }
 
 
@@ -116,7 +150,8 @@ class DeviceFragment : Fragment() {
         val screenLayout = resources.configuration.screenLayout
         return if ((screenLayout and android.content.res.Configuration.SCREENLAYOUT_SIZE_MASK) >=
             android.content.res.Configuration.SCREENLAYOUT_SIZE_LARGE
-        ) "Tablet" else "Phone"
+        ) getString(R.string.device_type_tablet)
+        else getString(R.string.device_type_phone)
     }
 
     private fun formatUptime(milliseconds: Long): String {

@@ -3,7 +3,7 @@ package com.example.deviceinfo.navigation
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.viewpager2.widget.ViewPager2
@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var selectedTabIndex = 0
 
+    private var currentTheme: String? = null
+    private var currentLang: String? = null
+
+    private var isRecreating = false
+
     override fun attachBaseContext(newBase: Context) {
         val langCode = LocaleHelper.getSavedLanguage(newBase)
         val context = LocaleHelper.setLocale(newBase, langCode)
@@ -26,30 +31,30 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val prefs = getSharedPreferences("app_settings", MODE_PRIVATE)
+        currentTheme = prefs.getString("theme", "light")
+        currentLang = LocaleHelper.getSavedLanguage(this)
+
+        applyTheme(currentTheme)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Apply theme from SharedPreferences
-        val prefs = getSharedPreferences("app_settings", MODE_PRIVATE)
-        when (prefs.getString("theme", "light")) {
-            "light" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            "dark" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                //"custom" -> setTheme(R.style.Theme_DeviceInfo_Custom)
-        }
-
-        // Setup Toolbar
         setSupportActionBar(binding.toolBar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        // Settings icon click
         binding.btnGoToSettings.setOnClickListener {
             startActivity(Intent(this, SettingActivity::class.java))
         }
 
-        // Restore selected tab after rotation
+        // Restore selected tab
         selectedTabIndex = savedInstanceState?.getInt("tab_index") ?: 0
 
-        // Setup ViewPager2
+        setupViewPager()
+    }
+
+    private fun setupViewPager() {
         val adapter = MainPagerAdapter(this)
         binding.viewPager.adapter = adapter
         binding.viewPager.offscreenPageLimit = adapter.itemCount
@@ -67,12 +72,10 @@ class MainActivity : AppCompatActivity() {
             getString(R.string.tab_apps)
         )
 
-        // Attach TabLayout with ViewPager
         TabLayoutMediator(binding.tab, binding.viewPager) { tab, position ->
             tab.text = tabTitles[position]
         }.attach()
 
-        // Track page changes
         binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 selectedTabIndex = position
@@ -80,7 +83,46 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    // Switch page programmatically (safe bounds check)
+    // Smooth theme/language change
+    override fun onResume() {
+        super.onResume()
+
+        if (isRecreating) return
+
+        val prefs = getSharedPreferences("app_settings", MODE_PRIVATE)
+        val newTheme = prefs.getString("theme", "light")
+        val newLang = LocaleHelper.getSavedLanguage(this)
+
+        if (newTheme != currentTheme || newLang != currentLang) {
+            currentTheme = newTheme
+            currentLang = newLang
+            isRecreating = true
+
+            // Show overlay loader
+            showLoader("Loading ...")
+
+            binding.root.postDelayed({
+                // Recreate activity to apply theme/language
+                recreate()
+            }, 600) // short delay for smoothness
+        } else {
+            // Ensure loader hidden if no change
+            binding.loaderOverlay.visibility = View.GONE
+        }
+    }
+
+    private fun showLoader(message: String) {
+        binding.loaderOverlay.visibility = View.VISIBLE
+        binding.loaderText.text = message
+    }
+
+    private fun applyTheme(theme: String?) {
+        when (theme) {
+            "dark" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            else -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
+    }
+
     fun switchToPage(position: Int) {
         val count = binding.viewPager.adapter?.itemCount ?: 0
         if (position in 0 until count) {

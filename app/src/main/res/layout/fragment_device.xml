@@ -39,7 +39,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Device Overview"
+                        android:text="@string/device_t1"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/Heading_blue"
@@ -63,7 +63,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Device Name"
+                                android:text="@string/device_l1_t1"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -84,7 +84,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Manufacturer"
+                                android:text="@string/device_l1_t2"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -105,7 +105,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Device Type"
+                                android:text="@string/device_l1_t3"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -126,7 +126,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Android Version"
+                                android:text="@string/device_l1_t4"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -146,7 +146,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="SDK Level"
+                                android:text="@string/device_l1_t5"
+                                android:textDirection="anyRtl"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -166,7 +167,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Build Number"
+                                android:text="@string/device_l1_t6"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -186,7 +187,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Security Patch"
+                                android:text="@string/device_l1_t7"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -222,7 +223,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="System  Kernel"
+                        android:text="@string/device_t2"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/Heading_blue"
@@ -245,7 +246,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Kernel Version"
+                                android:text="@string/device_l2_t1"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -265,7 +266,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Baseband"
+                                android:text="@string/device_l2_t2"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -285,7 +286,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Language"
+                                android:text="@string/device_l2_t3"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -305,7 +306,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Timezone"
+                                android:text="@string/device_l2_t4"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -325,7 +326,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Uptime"
+                                android:text="@string/device_l2_t5"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -362,7 +363,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Security Features"
+                        android:text="@string/device_t3"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/Heading_blue"
@@ -385,7 +386,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Screen Lock"
+                                android:text="@string/device_l3_t1"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -405,7 +406,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Biometric"
+                                android:text="@string/device_l3_t2"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -425,7 +426,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Encryption"
+                                android:text="@string/device_l3_t3"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -445,7 +446,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Play Services"
+                                android:text="@string/device_l3_t4"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -478,7 +479,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hardware Features"
+                        android:text="@string/device_t4"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/Heading_blue"
@@ -501,7 +502,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="NFC"
+                                android:text="@string/device_l4_t1"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -521,7 +522,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="GPS"
+                                android:text="@string/device_l4_t2"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"
@@ -541,7 +542,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Camera"
+                                android:text="@string/device_l4_t3"
                                 android:textColor="@color/details"/>
                             <TextView
                                 android:layout_width="0dp"

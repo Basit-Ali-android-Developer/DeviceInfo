@@ -27,7 +27,7 @@
             android:id="@+id/tvAppName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Device Info"
+            android:text="@string/about_dialog_title"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/Dashboard_text"/>
@@ -36,7 +36,7 @@
             android:id="@+id/tvVersion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Version 1.0"
+            android:text="@string/about_dialog_version"
             android:layout_marginTop="8dp"
             android:textColor="@color/Dashboard_text"/>
 
@@ -44,7 +44,7 @@
             android:id="@+id/tvDeveloper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Developer"
+            android:text="@string/about_dialog_developer"
             android:layout_marginTop="8dp"
             android:textColor="@color/Dashboard_text"/>
 
@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="Close"
+            android:text="@string/about_dialog_button"
             android:textAllCaps="false"
             android:textSize="14sp"
             android:textStyle="bold"

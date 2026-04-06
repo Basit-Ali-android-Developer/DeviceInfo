@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/appBackground">
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <!-- HEADER -->
     <LinearLayout
@@ -14,6 +19,8 @@
         android:elevation="4dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:layoutDirection="ltr"
+        android:textDirection="ltr"
         android:padding="16dp">
 
         <androidx.cardview.widget.CardView
@@ -87,7 +94,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Dark Mode"
+                        android:text="@string/setting_theme_text"
                         android:textColor="?attr/text"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -134,7 +141,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Language"
+                            android:text="@string/setting_language"
                             android:textColor="?attr/text"
                             android:textSize="16sp"
                             android:textStyle="bold"
@@ -180,16 +187,16 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="Feedback"
+                        android:text="@string/setting_feedback"
                         android:textColor="?attr/text"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginStart="16dp"/>
 
                     <ImageView
+                        android:id="@+id/arrow"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/arrownextsvg"
                         app:tint="?attr/text"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -223,16 +230,16 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="About"
+                        android:text="@string/setting_about"
                         android:textColor="?attr/text"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginStart="16dp"/>
 
                     <ImageView
+                        android:id="@+id/aboutArrow"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/arrownextsvg"
                         app:tint="?attr/text"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -241,3 +248,28 @@
     </ScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/loaderOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/appBackground"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:id="@+id/loaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textColor="?attr/text"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+
+</FrameLayout>

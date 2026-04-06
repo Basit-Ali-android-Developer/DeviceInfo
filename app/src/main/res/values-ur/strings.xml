@@ -208,6 +208,19 @@
     <string name="Network_c5_hotspot_off">بند</string>
 
 
+    <string name="setting_theme_text">ڈارک موڈ</string>
+    <string name="setting_language">زبان</string>
+    <string name="setting_feedback">فیڈ بیک</string>
+    <string name="setting_about">ہمارے بارے میں</string>
+
+
+    <string name="about_dialog_title">ڈیوائس کی معلومات</string>
+    <string name="about_dialog_version">ورژن 1.0</string>
+    <string name="about_dialog_developer">میرے ذریعہ تیار کردہ</string>
+    <string name="about_dialog_button">بند</string>
+
+
+
 
 
 
@@ -242,6 +255,52 @@
     <string name="changing_language">زبان تبدیل کی جا رہی ہے...</string>
     <string name="applying_theme">تھیم لاگو کی جا رہی ہے...</string>
     <string name="please_wait">براہ کرم انتظار کریں...</string>
+
+
+    <string name="device_t1">ڈیوائس کا جائزہ</string>
+    <string name="device_t2">سسٹم &amp; کرنل</string>
+    <string name="device_t3">سیکیورٹی خصوصیات</string>
+    <string name="device_t4">ہارڈویئر خصوصیات</string>
+
+    <string name="device_l1_t1">ڈیوائس کا نام</string>
+    <string name="device_l1_t2">مینوفیکچرر</string>
+    <string name="device_l1_t3">ڈیوائس کی قسم</string>
+    <string name="device_l1_t4">اینڈرائیڈ ورژن</string>
+    <string name="device_l1_t5">SDK سطح</string>
+    <string name="device_l1_t6">بلڈ نمبر</string>
+    <string name="device_l1_t7">سیکیورٹی پیچ</string>
+
+
+    <string name="device_l2_t1">کرنل ورژن</string>
+    <string name="device_l2_t2">بیس بینڈ</string>
+    <string name="device_l2_t3">زبان</string>
+    <string name="device_l2_t4">ٹائم زون</string>
+    <string name="device_l2_t5">آپ ٹائم</string>
+
+    <string name="device_l3_t1">اسکرین لاک</string>
+    <string name="device_l3_t2">بایومیٹرک</string>
+    <string name="device_l3_t3">انکرپشن</string>
+    <string name="device_l3_t4">پلے سروسز</string>
+
+
+    <string name="device_l4_t1">این ایف سی</string>
+    <string name="device_l4_t2">جی پی ایس</string>
+    <string name="device_l4_t3">کیمرہ</string>
+
+    <string name="device_type_phone">&#x202B;فون&#x202C;</string>
+    <string name="device_type_tablet">&#x202B;ٹیبلٹ&#x202C;</string>
+
+    <string name="screen_lock_pin">&#x202B;پن / پیٹرن / پاس ورڈ&#x202C;</string>
+    <string name="screen_lock_none">&#x202B;کوئی نہیں&#x202C;</string>
+
+    <string name="biometric_yes">&#x202B;ہاں&#x202C;</string>
+    <string name="biometric_no">&#x202B;نہیں&#x202C;</string>
+
+    <string name="encryption_enabled">&#x202B;فعال&#x202C;</string>
+    <string name="encryption_disabled">&#x202B;غیر فعال&#x202C;</string>
+
+    <string name="playservices_installed">&#x202B;انسٹال شدہ&#x202C;</string>
+    <string name="playservices_not_installed">&#x202B;انسٹال نہیں&#x202C;</string>
 
 
 

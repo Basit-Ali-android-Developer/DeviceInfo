@@ -1,4 +1,8 @@
-<h1 align="center">📱 DeviceInfo</h1>
+<p align="center"><img width="100" alt="WhatsApp Image 2026-09-19 at 2 39 19 AM" src="https://github.com/user-attachments/assets/d78c968c-6d50-48f7-ac6f-259de681ce77" /></p>
+
+
+
+<h1 align="center">DeviceInfo</h1>
 <p align="center">Native Android device-information dashboard — hardware specs, system info, and diagnostics in one clean interface.</p>
 
 <p align="center">
@@ -15,16 +19,16 @@ DeviceInfo gathers and presents a device's technical specifications — hardware
 
 ## 📱 Screenshots
 
-<!--
-Drag and drop your screenshots directly into this file while editing it on GitHub's
-web editor — GitHub uploads them and auto-inserts the image markdown for you.
--->
+  <img width="200" alt="DeviceInfo screenshot" src="https://github.com/user-attachments/assets/cd07add4-166a-4b05-a582-883ce76753ca" />
+  <img width="200" alt="DeviceInfo screenshot" src="https://github.com/user-attachments/assets/26b558bf-9a12-4dcf-a8bc-938a57ff0ccd" />
+  <img width="200" alt="DeviceInfo screenshot" src="https://github.com/user-attachments/assets/75de498d-4d61-47d8-833b-3bcc29b61f3d" />
+  <img width="200" alt="DeviceInfo screenshot" src="https://github.com/user-attachments/assets/e1c3a4b5-f644-4b6b-96ac-7023ece5310b" />
+  <img width="200" alt="DeviceInfo screenshot" src="https://github.com/user-attachments/assets/cf32c849-0ff4-427d-ae52-3ea6dfc7a76e" />
+  <img width="200" alt="DeviceInfo screenshot" src="https://github.com/user-attachments/assets/d19605aa-31ce-434c-b8fb-41418122d885" />
+  <img width="200" alt="DeviceInfo screenshot" src="https://github.com/user-attachments/assets/cc75dc6a-9e89-4e07-b0f5-56cc9eae37a6" />
+  <img width="200" alt="DeviceInfo screenshot" src="https://github.com/user-attachments/assets/f373e0f2-a9d7-49d3-b684-d13d8394416e" />
 
-<p align="center">
-  <img src="screenshots/screenshot1.png" width="200" />
-  <img src="screenshots/screenshot2.png" width="200" />
-  <img src="screenshots/screenshot3.png" width="200" />
-</p>
+
 
 ---
 
